@@ -1,10 +1,8 @@
-# Startpack Gulp 4.0
-
-Pug, less
+# Живой дом
 
 Клонируем в текущую папку (точка в конце через пробел):
 ```
-$ git clone git@github.com:kaddem/startpack.git .
+$ git clone git@github.com:kaddem/livinghouse.git .
 ```
 
 Избавляемся от привязки к удаленному репозиторию:
