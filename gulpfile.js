@@ -67,7 +67,7 @@ const path = {
   src: {
     // html: ['src/html/**/*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
     // html: ['src/html/**/*.pug', '!src/html/**/_*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
-    html: 'src/pug/pages/**/*.pug',
+    pug: 'src/pug/pages/**/*.pug',
     htmlDir: 'src/pug/pages/',
     js: 'src/js/**/*.js',
     less: 'src/less/*.less',
@@ -78,7 +78,7 @@ const path = {
   },
   watch: {
     // jade: ['src/html/**/*.jade', 'src/blocks/**/*.jade'],
-    jade: 'src/html/**/*.pug',
+    pug: 'src/pug/**/*.pug',
     js: 'src/js/**/*.js',
     less: ['src/less/**/*.less', 'src/blocks/**/*.less'],
     img: 'src/img/*.*',
@@ -91,7 +91,7 @@ const path = {
 // Compilation jade
 
 gulp.task('pug', function() {
-  return gulp.src(path.src.html, {since: gulp.lastRun('pug')})
+  return gulp.src(path.src.pug, {since: gulp.lastRun('pug')})
     .pipe(debug())
     .pipe(plumber({ errorHandler: onError }))
     .pipe(pug())
@@ -207,7 +207,7 @@ gulp.task('serve', function() {
 // Overall watch
 gulp.task('watch', function(){
   gulp.watch(path.watch.pngSprites, gulp.series('png-sprites'));
-  gulp.watch(path.watch.jade, gulp.series('pug'));
+  gulp.watch(path.watch.pug, gulp.series('pug'));
   gulp.watch(path.watch.less, gulp.series('less'));
   gulp.watch(path.watch.img, gulp.series('img'));
   gulp.watch(path.watch.js, gulp.series('js'));

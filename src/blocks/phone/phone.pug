@@ -1,0 +1,5 @@
+mixin phone(phone1, phonelink1, phone2, phonelink2)
+  +b.phone&attributes(attributes)
+    block
+    +e.A.number(href= phonelink1)= phone1
+    +e.A.number(href= phonelink2)= phone2

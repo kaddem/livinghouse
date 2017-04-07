@@ -1,0 +1,286 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@icon-clock-name: 'icon-clock';
+@icon-clock-x: 135px;
+@icon-clock-y: 104px;
+@icon-clock-offset-x: -135px;
+@icon-clock-offset-y: -104px;
+@icon-clock-width: 15px;
+@icon-clock-height: 16px;
+@icon-clock-total-width: 165px;
+@icon-clock-total-height: 144px;
+@icon-clock-image: '../img/png-sprite.png';
+@icon-clock: 135px 104px -135px -104px 15px 16px 165px 144px '../img/png-sprite.png' 'icon-clock';
+@icon-clock-2x-name: 'icon-clock@2x';
+@icon-clock-2x-x: 46px;
+@icon-clock-2x-y: 95px;
+@icon-clock-2x-offset-x: -46px;
+@icon-clock-2x-offset-y: -95px;
+@icon-clock-2x-width: 30px;
+@icon-clock-2x-height: 32px;
+@icon-clock-2x-total-width: 165px;
+@icon-clock-2x-total-height: 144px;
+@icon-clock-2x-image: '../img/png-sprite.png';
+@icon-clock-2x: 46px 95px -46px -95px 30px 32px 165px 144px '../img/png-sprite.png' 'icon-clock@2x';
+@icon-clock-3x-name: 'icon-clock@3x';
+@icon-clock-3x-x: 49px;
+@icon-clock-3x-y: 0px;
+@icon-clock-3x-offset-x: -49px;
+@icon-clock-3x-offset-y: 0px;
+@icon-clock-3x-width: 45px;
+@icon-clock-3x-height: 48px;
+@icon-clock-3x-total-width: 165px;
+@icon-clock-3x-total-height: 144px;
+@icon-clock-3x-image: '../img/png-sprite.png';
+@icon-clock-3x: 49px 0px -49px 0px 45px 48px 165px 144px '../img/png-sprite.png' 'icon-clock@3x';
+@icon-email-name: 'icon-email';
+@icon-email-x: 95px;
+@icon-email-y: 82px;
+@icon-email-offset-x: -95px;
+@icon-email-offset-y: -82px;
+@icon-email-width: 15px;
+@icon-email-height: 11px;
+@icon-email-total-width: 165px;
+@icon-email-total-height: 144px;
+@icon-email-image: '../img/png-sprite.png';
+@icon-email: 95px 82px -95px -82px 15px 11px 165px 144px '../img/png-sprite.png' 'icon-email';
+@icon-email-2x-name: 'icon-email@2x';
+@icon-email-2x-x: 135px;
+@icon-email-2x-y: 64px;
+@icon-email-2x-offset-x: -135px;
+@icon-email-2x-offset-y: -64px;
+@icon-email-2x-width: 30px;
+@icon-email-2x-height: 22px;
+@icon-email-2x-total-width: 165px;
+@icon-email-2x-total-height: 144px;
+@icon-email-2x-image: '../img/png-sprite.png';
+@icon-email-2x: 135px 64px -135px -64px 30px 22px 165px 144px '../img/png-sprite.png' 'icon-email@2x';
+@icon-email-3x-name: 'icon-email@3x';
+@icon-email-3x-x: 0px;
+@icon-email-3x-y: 95px;
+@icon-email-3x-offset-x: 0px;
+@icon-email-3x-offset-y: -95px;
+@icon-email-3x-width: 45px;
+@icon-email-3x-height: 33px;
+@icon-email-3x-total-width: 165px;
+@icon-email-3x-total-height: 144px;
+@icon-email-3x-image: '../img/png-sprite.png';
+@icon-email-3x: 0px 95px 0px -95px 45px 33px 165px 144px '../img/png-sprite.png' 'icon-email@3x';
+@icon-phone-fill-name: 'icon-phone-fill';
+@icon-phone-fill-x: 135px;
+@icon-phone-fill-y: 87px;
+@icon-phone-fill-offset-x: -135px;
+@icon-phone-fill-offset-y: -87px;
+@icon-phone-fill-width: 16px;
+@icon-phone-fill-height: 16px;
+@icon-phone-fill-total-width: 165px;
+@icon-phone-fill-total-height: 144px;
+@icon-phone-fill-image: '../img/png-sprite.png';
+@icon-phone-fill: 135px 87px -135px -87px 16px 16px 165px 144px '../img/png-sprite.png' 'icon-phone-fill';
+@icon-phone-fill-2x-name: 'icon-phone-fill@2x';
+@icon-phone-fill-2x-x: 95px;
+@icon-phone-fill-2x-y: 49px;
+@icon-phone-fill-2x-offset-x: -95px;
+@icon-phone-fill-2x-offset-y: -49px;
+@icon-phone-fill-2x-width: 32px;
+@icon-phone-fill-2x-height: 32px;
+@icon-phone-fill-2x-total-width: 165px;
+@icon-phone-fill-2x-total-height: 144px;
+@icon-phone-fill-2x-image: '../img/png-sprite.png';
+@icon-phone-fill-2x: 95px 49px -95px -49px 32px 32px 165px 144px '../img/png-sprite.png' 'icon-phone-fill@2x';
+@icon-phone-fill-3x-name: 'icon-phone-fill@3x';
+@icon-phone-fill-3x-x: 0px;
+@icon-phone-fill-3x-y: 0px;
+@icon-phone-fill-3x-offset-x: 0px;
+@icon-phone-fill-3x-offset-y: 0px;
+@icon-phone-fill-3x-width: 48px;
+@icon-phone-fill-3x-height: 48px;
+@icon-phone-fill-3x-total-width: 165px;
+@icon-phone-fill-3x-total-height: 144px;
+@icon-phone-fill-3x-image: '../img/png-sprite.png';
+@icon-phone-fill-3x: 0px 0px 0px 0px 48px 48px 165px 144px '../img/png-sprite.png' 'icon-phone-fill@3x';
+@icon-phone-name: 'icon-phone';
+@icon-phone-x: 0px;
+@icon-phone-y: 129px;
+@icon-phone-offset-x: 0px;
+@icon-phone-offset-y: -129px;
+@icon-phone-width: 15px;
+@icon-phone-height: 15px;
+@icon-phone-total-width: 165px;
+@icon-phone-total-height: 144px;
+@icon-phone-image: '../img/png-sprite.png';
+@icon-phone: 0px 129px 0px -129px 15px 15px 165px 144px '../img/png-sprite.png' 'icon-phone';
+@icon-phone-2x-name: 'icon-phone@2x';
+@icon-phone-2x-x: 77px;
+@icon-phone-2x-y: 95px;
+@icon-phone-2x-offset-x: -77px;
+@icon-phone-2x-offset-y: -95px;
+@icon-phone-2x-width: 30px;
+@icon-phone-2x-height: 30px;
+@icon-phone-2x-total-width: 165px;
+@icon-phone-2x-total-height: 144px;
+@icon-phone-2x-image: '../img/png-sprite.png';
+@icon-phone-2x: 77px 95px -77px -95px 30px 30px 165px 144px '../img/png-sprite.png' 'icon-phone@2x';
+@icon-phone-3x-name: 'icon-phone@3x';
+@icon-phone-3x-x: 46px;
+@icon-phone-3x-y: 49px;
+@icon-phone-3x-offset-x: -46px;
+@icon-phone-3x-offset-y: -49px;
+@icon-phone-3x-width: 45px;
+@icon-phone-3x-height: 45px;
+@icon-phone-3x-total-width: 165px;
+@icon-phone-3x-total-height: 144px;
+@icon-phone-3x-image: '../img/png-sprite.png';
+@icon-phone-3x: 46px 49px -46px -49px 45px 45px 165px 144px '../img/png-sprite.png' 'icon-phone@3x';
+@icon-pin-name: 'icon-pin';
+@icon-pin-x: 152px;
+@icon-pin-y: 87px;
+@icon-pin-offset-x: -152px;
+@icon-pin-offset-y: -87px;
+@icon-pin-width: 13px;
+@icon-pin-height: 16px;
+@icon-pin-total-width: 165px;
+@icon-pin-total-height: 144px;
+@icon-pin-image: '../img/png-sprite.png';
+@icon-pin: 152px 87px -152px -87px 13px 16px 165px 144px '../img/png-sprite.png' 'icon-pin';
+@icon-pin-2x-name: 'icon-pin@2x';
+@icon-pin-2x-x: 135px;
+@icon-pin-2x-y: 31px;
+@icon-pin-2x-offset-x: -135px;
+@icon-pin-2x-offset-y: -31px;
+@icon-pin-2x-width: 26px;
+@icon-pin-2x-height: 32px;
+@icon-pin-2x-total-width: 165px;
+@icon-pin-2x-total-height: 144px;
+@icon-pin-2x-image: '../img/png-sprite.png';
+@icon-pin-2x: 135px 31px -135px -31px 26px 32px 165px 144px '../img/png-sprite.png' 'icon-pin@2x';
+@icon-pin-3x-name: 'icon-pin@3x';
+@icon-pin-3x-x: 95px;
+@icon-pin-3x-y: 0px;
+@icon-pin-3x-offset-x: -95px;
+@icon-pin-3x-offset-y: 0px;
+@icon-pin-3x-width: 39px;
+@icon-pin-3x-height: 48px;
+@icon-pin-3x-total-width: 165px;
+@icon-pin-3x-total-height: 144px;
+@icon-pin-3x-image: '../img/png-sprite.png';
+@icon-pin-3x: 95px 0px -95px 0px 39px 48px 165px 144px '../img/png-sprite.png' 'icon-pin@3x';
+@icon-search-name: 'icon-search';
+@icon-search-x: 108px;
+@icon-search-y: 95px;
+@icon-search-offset-x: -108px;
+@icon-search-offset-y: -95px;
+@icon-search-width: 15px;
+@icon-search-height: 15px;
+@icon-search-total-width: 165px;
+@icon-search-total-height: 144px;
+@icon-search-image: '../img/png-sprite.png';
+@icon-search: 108px 95px -108px -95px 15px 15px 165px 144px '../img/png-sprite.png' 'icon-search';
+@icon-search-2x-name: 'icon-search@2x';
+@icon-search-2x-x: 135px;
+@icon-search-2x-y: 0px;
+@icon-search-2x-offset-x: -135px;
+@icon-search-2x-offset-y: 0px;
+@icon-search-2x-width: 30px;
+@icon-search-2x-height: 30px;
+@icon-search-2x-total-width: 165px;
+@icon-search-2x-total-height: 144px;
+@icon-search-2x-image: '../img/png-sprite.png';
+@icon-search-2x: 135px 0px -135px 0px 30px 30px 165px 144px '../img/png-sprite.png' 'icon-search@2x';
+@icon-search-3x-name: 'icon-search@3x';
+@icon-search-3x-x: 0px;
+@icon-search-3x-y: 49px;
+@icon-search-3x-offset-x: 0px;
+@icon-search-3x-offset-y: -49px;
+@icon-search-3x-width: 45px;
+@icon-search-3x-height: 45px;
+@icon-search-3x-total-width: 165px;
+@icon-search-3x-total-height: 144px;
+@icon-search-3x-image: '../img/png-sprite.png';
+@icon-search-3x: 0px 49px 0px -49px 45px 45px 165px 144px '../img/png-sprite.png' 'icon-search@3x';
+@spritesheet-width: 165px;
+@spritesheet-height: 144px;
+@spritesheet-image: '../img/png-sprite.png';
+@spritesheet-sprites: @icon-clock @icon-clock-2x @icon-clock-3x @icon-email @icon-email-2x @icon-email-3x @icon-phone-fill @icon-phone-fill-2x @icon-phone-fill-3x @icon-phone @icon-phone-2x @icon-phone-3x @icon-pin @icon-pin-2x @icon-pin-3x @icon-search @icon-search-2x @icon-search-3x;
+@spritesheet: 165px 144px '../img/png-sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

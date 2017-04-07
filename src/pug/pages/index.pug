@@ -2,4 +2,14 @@ extends ../layout/_layoutBase.pug
 
 
 block content
-  +b.H1.title Hello, world!
+  +page-header
+    +e.logo
+      +logo("#", "/img/logo.png", "Живой дом")
+    +e.info
+      .row
+        +phone("+7 (812) 648-29-49", "tel:+78126482949", "+7 (812) 955-05-07", "tel:+78129550507")
+        +main-nav
+          +main-nav-item("--active", "#", "Каталог проектов")
+          +main-nav-item("", "#", "Пиломатериалы")
+          +main-nav-item("", "#", "Отзывы")
+          +main-nav-item("", "#", "Контакты")
