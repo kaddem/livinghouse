@@ -1,0 +1,9 @@
+mixin contacts(mail)
+  +b.contacts&attributes(attributes)
+    +e.SPAN.title Контакты
+    +e.P.address Санкт-Петербург, Ломоносовский р-н, д. Яльгелево
+    +phone("+7 (812) 648-29-49", "tel:+78126482949", "+7 (812) 955-05-07", "tel:+78129550507")
+    +e.A.mail(href= mail) info@Lhspb.ru
+    +e.P.time
+      +e.SPAN.time-work пн — сб с 9:00 до 18:00
+      +e.SPAN.time-holly воскресение — выходной
