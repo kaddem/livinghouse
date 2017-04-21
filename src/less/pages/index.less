@@ -1,0 +1,89 @@
+.projects {
+
+  &__inner {
+    .container(30px);
+  }
+
+  &__row {
+    .row(30px);
+  }
+
+  &__item {
+    .col(30px, left);
+    .col12-6;
+    margin-bottom: 30px;
+  }
+}
+
+.steps {
+  padding-top: 60px;
+
+  &__inner {
+    .container(30px);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 60px;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    font-family: @lato;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: @blue-dark;
+  }
+
+  &__list {
+    .row(30px);
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    .col(30px, left);
+    .col5-1;
+    list-style: none;
+  }
+
+  &__circle {
+    width: 210px;
+    height: 210px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 3px solid @green;
+    border-radius: 50%;
+  }
+
+  &__text {
+    position: relative;
+    top: 50%;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    font-family: @lato;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: @blue-dark;
+    transform: translateY(-50%);
+  }
+
+}
+
+.consult {
+  background-image: url(/img/steps_bg.jpg);
+
+  &__inner {
+    .container(30px);
+  }
+
+  &__title {
+    font-family: @lato;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 1px;
+  }
+}

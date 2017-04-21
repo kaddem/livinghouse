@@ -1,0 +1,39 @@
+mixin project-card(tagModif, imgSrc, imgAlt, chartSrc, chartAlt)
+  +b.ARTICLE.project-card&attributes(attributes)
+    +e.inner
+      +e.visual
+        +e.photo
+          +e.IMG.img(src= imgSrc, alt= imgAlt)
+        +e.chart
+          +e.chart-item
+            +e.SPAN.chart-title 1 этаж
+            +e.IMG.chart-img(src= chartSrc, alt= chartAlt)
+          +e.chart-item
+            +e.SPAN.chart-title 1 этаж
+            +e.IMG.chart-img(src= chartSrc, alt= chartAlt)
+      +e.info
+        +e.H2.title Колтуши
+        +e.character
+          +e.SPAN.key Размер
+          +e.SPAN.value 6x9
+            +e.SPAN.dimension м
+        +e.character
+          +e.SPAN.key Площадь
+          +e.SPAN.value 88
+            +e.SPAN.dimension м
+              +e.SUP 2
+        +e.character
+          +e.SPAN.key Брус
+          +e.SPAN.price.--actual от 
+            +e.SPAN.price-actual 319 000
+              +e.SPAN.currency &#8399;
+            +e.SPAN.price-old 320 000
+              +e.SPAN.currency &#8399;
+        +e.character
+          +e.SPAN.key Каркас
+          +e.SPAN.price от 
+            +e.SPAN.price-actual 200 000
+              +e.SPAN.currency &#8399;
+        block
+      +e.tag
+        +e.SPAN.tag-text(class= tagModif)  Скидка 10%
