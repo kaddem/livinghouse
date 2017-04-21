@@ -1,3 +1,32 @@
 .phone{
-	display: block;
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  padding-left: 30px;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    display: block;
+    .sprite(@icon-phone-fill);
+  }
+
+  &__number {
+    margin-left: 20px;
+    display: inline-block;
+    font-family: @lato;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 16px;
+    color: @blue-dark;
+    text-decoration: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }

@@ -1,3 +1,29 @@
 .page-header{
-	display: block;
+  // position: fixed;
+  // top: 0;
+  // bottom: 0;
+  // width: 100%;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
+  &__inner {
+    .container(30px)
+  }
+
+  &__row {
+    .row(30px)
+  }
+
+  &__logo {
+    .col(30px, left);
+    .col12-3;
+  }
+
+  &__info {
+    .col(30px, left);
+    .col12-9;
+    padding-top: 9px;
+    text-align: right;
+  }
 }

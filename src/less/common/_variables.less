@@ -1,9 +1,13 @@
 // Переменные модульной сетки
 
+
+// Расстоянии между колонками модульной сетки
+@indent-col:                          30px;
+
 // Ширины экранов
 @width_desktop_wide:                  1920px;
 @width_desktop_middle:                1440px;
-@width_desktop_min:                   1280px;
+@width_desktop_min:                   1200px;
 @width_tablet:                        768px;
 @width_phone:                         375px;
 
@@ -15,12 +19,12 @@
 // Ширины контентных областей
 @container_desktop_wide:              ( @width_desktop_wide - 80 );
 @container_desktop_middle:            ( @width_desktop_middle - 110 );
-@container_desktop_min:               ( @width_desktop_min - 80 );
+@container_desktop_min:               @width_desktop_min;
 @container_tablet:                    ( @width_tablet - 80 );
 @container_phone:                     ( @width_phone - 40 );
 
-// Расстоянии между колонками модульной сетки
-@indent-col:                          30px;
+
+
 
 
 // шиирины и отступы aside
@@ -42,8 +46,29 @@
 
 
 // Цветовая палитра
-@white:                               #ffffff;
+@green:                               #66cc00;
+@green-salad:                         #99ff66;
+@green-light:                         #ccff33;
 
+@gray:                                #f1f0ee;
+@dark:                                #3b3a39;
+
+@blue:                                #4f5b99;
+@blue-dark:                           #4c5a7a;
+
+@orange:                              #ff9900;
+@yellow:                              #ffcc33;
+
+@red:                                 #ff1330;
+
+@border-card:                         rgba(151, 151, 151, .25);
+
+// Полупрозрачные плашки
+@tag-green:                           rgba(102, 204, 0, .8);
+@tag-blue:                            rgba(71, 85, 251, .8);
+@tag-red:                             rgba(255, 33, 33, .8);
+@tag-magentic:                        rgba(79, 91, 153, .8);
+@tag-orange:                          rgba(255, 153, 0, .8);
 
 // Шрифты
-@pt-sans:                              'PT Sans', sans-serif;
+@lato:                              Lato, Arial, sans-serif;
