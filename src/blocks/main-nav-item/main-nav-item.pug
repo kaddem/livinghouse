@@ -1,3 +1,4 @@
 mixin main-nav-item(activeClass, href, title)
   +e.LI.item&attributes(attributes)
     +e.A.link(class= activeClass, href= href)= title
+    block
