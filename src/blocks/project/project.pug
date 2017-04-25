@@ -1,0 +1,53 @@
+mixin project(title, imgSrc, imgAlt, chartSrc, chartAlt)
+  +b.SECTION.project&attributes(attributes)
+    +e.inner
+      +e.H1.title= title
+      +e.row
+        +e.visual
+          +e.photo
+            +e.IMG.img(src= imgSrc, alt= imgAlt)
+          +e.chart
+            +e.chart-item
+              +e.chart-content
+                +e.SPAN.chart-title 1 этаж
+                +e.chart-box
+                  +e.IMG.chart-img(src= chartSrc, alt= chartAlt)
+            +e.chart-item
+              +e.chart-content
+                +e.SPAN.chart-title 1 этаж
+                +e.chart-box
+                  +e.IMG.chart-img(src= chartSrc, alt= chartAlt)
+        +e.info
+          +e.content
+            +e.price
+              +e.SPAN.price-old 480 000
+                  +e.SPAN.currency &#8399;
+              +e.SPAN.money.--actual от
+                +e.SPAN.price-actual 250 000
+                  +e.SPAN.currency &#8399;
+              block
+            +e.character
+              +e.character-item
+                +e.SPAN.key Размер:
+                +e.SPAN.value.--green 6 x 9 м2
+              +e.character-item
+                +e.SPAN.key Площадь:
+                +e.SPAN.value.--green 88 м.кв
+              +e.character-item.--bedroom
+                +e.SPAN.key Спальня:
+                +e.SPAN.value 3
+              +e.character-item.--bathroom
+                +e.SPAN.key Санузел:
+                +e.SPAN.value 2
+              +e.character-item.--hall
+                +e.SPAN.key Холл:
+                +e.SPAN.value 1
+              +e.character-item.--kitchen
+                +e.SPAN.key Кухня:
+                +e.SPAN.value 1
+              +e.character-item.--terrace
+                +e.SPAN.key Терраса:
+                +e.SPAN.value 3
+              +e.character-item.--balcony
+                +e.SPAN.key Балкон:
+                +e.SPAN.value 2
