@@ -1,36 +1,44 @@
 extends ../layout/_layoutBase.pug
 
-
 block content
-  +page-header
+  +page-header("--index")
     +e.logo
-      +logo("#", "/img/logo.png", "Живой дом")
+      +logo("/index.html", "/img/logo.png", "Живой дом")
     +e.info
       .row
         +phone("+7 (812) 648-29-49", "tel:+78126482949", "+7 (812) 955-05-07", "tel:+78129550507")
         +main-nav
-          +main-nav-item("--active", "#", "Каталог проектов")
+          +main-nav-item("", "/projects.html", "Каталог проектов")
           +main-nav-item("", "#", "Пиломатериалы")
           +main-nav-item("", "#", "Отзывы")
           +main-nav-item("", "#", "Контакты")
 
-
   +b.MAIN
+    +promo()
+      +promo-slider()
+      
+
     +b.SECTION.projects
       +e.inner
         +e.row
           +e.item
             +project-card("--red", "/img/house_one.jpg", "Проект загородного дома", "/img/chart.jpg", "Схема этажа")
+              +b.A.btn.--green.--pr-card(href="/projects/project-card.html") Подробнее
           +e.item
             +project-card("--blue", "/img/house_one.jpg", "Проект загородного дома", "/img/chart.jpg", "Схема этажа")
+              +b.A.btn.--green.--pr-card(href="/projects/project-card.html") Подробнее
           +e.item
             +project-card("--green", "/img/house_one.jpg", "Проект загородного дома", "/img/chart.jpg", "Схема этажа")
+              +b.A.btn.--green.--pr-card(href="/projects/project-card.html") Подробнее
           +e.item
             +project-card("--orange", "/img/house_one.jpg", "Проект загородного дома", "/img/chart.jpg", "Схема этажа")
+              +b.A.btn.--green.--pr-card(href="/projects/project-card.html") Подробнее
           +e.item
             +project-card("--magentic", "/img/house_one.jpg", "Проект загородного дома", "/img/chart.jpg", "Схема этажа")
+              +b.A.btn.--green.--pr-card(href="/projects/project-card.html") Подробнее
           +e.item
             +project-card("--green", "/img/house_one.jpg", "Проект загородного дома", "/img/chart.jpg", "Схема этажа")
+              +b.A.btn.--green.--pr-card(href="/projects/project-card.html") Подробнее
 
     +b.SECTION.steps
       +e.inner
@@ -52,14 +60,27 @@ block content
             +e.circle
               +e.SPAN.text Войти в свой новый дом
 
+    +form-block("/img/usefull_photo.jpg", "alt тут будет", "Подобрать проект по параметрам:")
+      +form()
+        +b.BUTTON.btn.--orange-fill Показать проекты
+
     +b.SECTION.consult
       +e.inner
         +e.H2.title Нужна консультация?
-        +e.P.text Звоните
+        +e.P.text-phone Звоните
           +e.A.phone(href="tel:+78126482949") +7 (812) 648-29-49
         +e.P.text Или отправьте заявку, мы вам перезвоним:
         +e.FORM.form
           +e.INPUT.input-tel(placeholder="+7 (___) ___-__-__")
+          +b.BUTTON.btn.--green-fill.--consult Перезвоните мне
+
+    +about("/img/usefull_photo.jpg", "alt тут будет", "О компании", "Каждая сосна или ель из которой мы изготавливаем пиломатериалы по-своему индивидуальны и неповторимы. Дерево по своей сути является уникальным, живым строительным материалом, его нельзя изготовить, смешав различные компоненты, оно должно вырасти! Именно это свойство древесины и послужило основой для выбора названия нашей организации — «Живой дом». В далёком 2001 году мы начинали свой путь со строительства небольших деревянных домов и бань. С января 2009 года мы осуществляем свою деятельность под брендом «Живой дом». На сегодняшний день «Живой дом» представляет из себя вертикально интегрированную компанию осуществляющую полный цикл лесозаготовки и деревопереработки. Мы производим и реализуем широкий ассортимент качественных пиломатериалов и как и прежде строим для вас качественные и не дорогие деревянные дома и коттеджи по различным технологиям. ")
+
+    +usefull-info('Полезная информация')
+      +usefull-item("/img/usefull_photo.jpg", "alt тут будет", "Сравнение фундамента: сваи или лента?", "Для возведения лёгких конструкций к каковым относятся дома и коттеджи из профилированного бруса естественной влажности, применяются различные виды фундаментов… ")
+      +usefull-item("/img/usefull_photo.jpg", "alt тут будет", "Быстрый расчёт индивидуального проекта", "Уважаемые посетители нашего сайта. Расчёт стоимости строительства домов и коттеджей из профилированного бруса естественной влажности производится…")
+      +usefull-item("/img/usefull_photo.jpg", "alt тут будет", "Быстрый расчёт индивидуального проекта", "Многие обладатели домов, и те, кто еще только планирует строительство собственного дома из профилированного бруса естественной влажности, задумываются над этим вопросом...")
+
 
   +page-footer
     +usefull

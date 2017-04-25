@@ -131,10 +131,14 @@ gulp.task('less', function () {
 gulp.task('js', function() {
   return gulp.src(path.src.js)
     .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(debug({title: 'js init'}))
     .pipe(plumber({ errorHandler: onError }))
     .pipe(concat('script.min.js'))
+    .pipe(debug({title: 'js concat'}))
     .pipe(uglify())
+    .pipe(debug({title: 'js uglify'}))
     .pipe(sourcemaps.write('/'))
+    .pipe(debug({title: 'js map'}))
     .pipe(gulp.dest(path.build.js))
 });
 

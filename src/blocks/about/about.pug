@@ -1,0 +1,9 @@
+mixin about(imgSrc, imgAlt, title, text)
+  +b.SECTION.about&attributes(attributes)
+    +e.inner
+      +e.DIV.visual
+        +e.IMG.photo(src= imgSrc, alt= imgAlt)
+      +e.border
+        +e.content
+          +e.H2.title= title
+          +e.P.text= text

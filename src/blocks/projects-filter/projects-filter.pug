@@ -1,0 +1,46 @@
+mixin projects-filter()
+  +b.SECTION.projects-filter&attributes(attributes)
+    +e.inner
+      +e.H1.title Подобрать проект по параметрам:
+      +e.box
+        +e.item.--type
+          +e.LABEL.label Тип проекта
+          +e.SELECT.select
+            +e.OPTION Постоянное проживание
+            +e.OPTION Летнее проживание
+            +e.OPTION Осенне-весеннее проживание
+            +e.OPTION Временная регистрация
+            +e.OPTION Вид на жительство
+            +e.OPTION Green-card
+        +e.item.--bedroom
+          +e.LABEL.label Спален
+          +e.SELECT.select
+            +e.OPTION 1
+            +e.OPTION 2
+            +e.OPTION 3
+        +e.item.--square
+          +e.LABEL.label Площадь
+          +e.SELECT.select
+            +e.OPTION 100 - 120
+            +e.OPTION 120 - 140
+            +e.OPTION 140 - 160
+            +e.OPTION 160 - 180
+            +e.OPTION 180 - 200
+            +e.OPTION от 200
+        +e.item.--proportions
+          +e.LABEL.label Площадь
+          +e.SELECT.select
+            +e.OPTION 6 Х 6
+            +e.OPTION 7 Х 7
+            +e.OPTION 8 Х 8
+            +e.OPTION 8 Х 6
+            +e.OPTION 9 Х 7
+        +e.item.--price
+          +e.price
+            +e.LABEL.label Стоимость от
+            +e.INPUT.cost.--start(placeholder="", value="100 000")
+          +e.price
+            +e.LABEL.label До
+            +e.INPUT.cost.--end(placeholder="", value="300 000")
+        +e.item.--btn
+          +e.BUTTON.btn 

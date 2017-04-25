@@ -1,0 +1,9 @@
+mixin form-block(imgSrc, imgAlt, title)
+  +b.form-block&attributes(attributes)
+    +e.inner
+      +e.DIV.visual
+        +e.IMG.photo(src= imgSrc, alt= imgAlt)
+      +e.border
+        +e.content
+          +e.H2.title= title
+          block

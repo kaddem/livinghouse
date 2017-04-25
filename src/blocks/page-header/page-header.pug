@@ -1,5 +1,5 @@
-mixin page-header()
-  +b.HEADER.page-header&attributes(attributes)
+mixin page-header(bemMod)
+  +b.HEADER.page-header(class= bemMod)&attributes(attributes)
     +e.inner
       +e.row
         block

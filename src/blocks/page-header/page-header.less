@@ -1,11 +1,17 @@
 .page-header{
-  // position: fixed;
-  // top: 0;
-  // bottom: 0;
-  // width: 100%;
   display: block;
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: solid 1px #f1f0ee;
+
+  &--index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
   
   &__inner {
     .container(30px)

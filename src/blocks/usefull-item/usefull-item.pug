@@ -1,0 +1,7 @@
+mixin usefull-item(imgSrc, imgAlt, title, text)
+  +b.usefull-item&attributes(attributes)
+    +e.A.content(href="#")
+      +e.DIV.visual
+        +e.IMG.photo(src= imgSrc, alt= imgAlt)
+      +e.H3.title= title
+      +e.P.text= text

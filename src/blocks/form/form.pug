@@ -1,0 +1,27 @@
+mixin form()
+  +b.FORM.form&attributes(attributes)
+    +e.item.--type
+      +e.P.label Тип проекта
+      +e.SELECT.select(placeholder="")
+        +e.OPTION Постоянное проживание
+        +e.OPTION Летнее проживание
+        +e.OPTION Осенне-весеннее проживание
+        +e.OPTION Временная регистрация
+        +e.OPTION Вид на жительство
+        +e.OPTION Green-card
+    +e.item.--proportions
+      +e.P.label Площадь дома, м.кв
+      +e.SELECT.select(placeholder="")
+        +e.OPTION 100-120
+        +e.OPTION 120-140
+        +e.OPTION 140-160
+        +e.OPTION 160-180
+        +e.OPTION 180-200
+        +e.OPTION от 200
+    +e.item.--price
+      +e.P.label Стоимость, руб.
+      +e.INPUT.cost.--start(placeholder="")
+      +e.INPUT.cost.--end(placeholder="")
+    
+    +e.item.--btn
+      block

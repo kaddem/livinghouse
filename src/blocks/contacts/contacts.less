@@ -1,3 +1,73 @@
 .contacts{
-	display: block;
+  .col(30px, left);
+  .col12-4;
+
+  &__title {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 15px;
+    letter-spacing: .9px;
+    font-family: @lato;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__address {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: .9px;
+    font-family: @lato;
+    font-weight: normal;
+    text-decoration: none;
+    text-indent: 25px;
+    color: #fff;
+  }
+
+  &__phone {
+    margin-bottom: 15px;
+  }
+
+  &__number {
+    margin-left: 25px;
+    display: inline-block;
+    font-family: @lato;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__mail {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+    font-family: @lato;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__time {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    font-family: @lato;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    text-indent: 25px;
+    color: #fff;
+    text-decoration: none;
+  }
 }

@@ -1,3 +1,50 @@
 .page-footer{
+  padding-top: 60px;
 	display: block;
+  background-color: @blue-dark;
+
+  &__inner {
+    .container(30px);
+  }
+
+  &__row {
+    .row(30px);
+  }
+
+  &__error {
+    text-align: center;
+  }
+
+  &__error-message {
+    margin-top: 80px;
+    margin-bottom: 15px;
+    font-family: @lato;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: .5px;
+    color: #fff;
+  }
+
+  &__copyright {
+    padding: 16px 0;
+    background-color: #f1f0ee;
+    text-align: center;
+  }
+}
+
+
+.copytight {
+  margin: 0;
+
+  &__text {
+    font-family: @lato;
+    font-size: 15px;
+    font-weight: normal;
+
+    &:before {
+      content: '©';
+      margin-right: 5px;
+    }
+  }
 }
