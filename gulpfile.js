@@ -89,7 +89,6 @@ const path = {
 };
 
 // Compilation jade
-
 gulp.task('pug', function() {
   return gulp.src(path.src.pug, {since: gulp.lastRun('pug')})
     .pipe(debug())
