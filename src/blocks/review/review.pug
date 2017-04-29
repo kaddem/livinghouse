@@ -1,5 +1,32 @@
 mixin review()
-	+b.SECTION.review&attributes(attributes)
-		block
-		+e.inner
-			+e.P.title review
+  +b.SECTION.review&attributes(attributes)
+    +e.inner
+      +e.SPAN.number 001
+      +e.H1.title Проект дома Любань
+      +e.row
+        +e.slider-box
+          +e.slider-content
+            +e.slider-big
+              +e.slider-big-item
+                +e.IMG.big-photo(src="/img/review-card.jpg")
+              +e.slider-big-item
+                +e.IMG.big-photo(src="/img/review1.jpg")
+              +e.slider-big-item
+                +e.IMG.big-photo(src="/img/review2.jpg")
+              +e.slider-big-item
+                +e.IMG.big-photo(src="/img/review3.jpg")
+              +e.slider-big-item
+                +e.IMG.big-photo(src="/img/project.jpg")
+            +e.slider-preview
+              +e.slider-preview-item
+                +e.IMG.preview-photo(src="/img/review-card.jpg")
+              +e.slider-preview-item
+                +e.IMG.preview-photo(src="/img/review1.jpg")
+              +e.slider-preview-item
+                +e.IMG.preview-photo(src="/img/review2.jpg")
+              +e.slider-preview-item
+                +e.IMG.preview-photo(src="/img/review3.jpg")
+              +e.slider-preview-item
+                +e.IMG.preview-photo(src="/img/project.jpg")
+        +e.info-box
+          +e.P так чисто поржать

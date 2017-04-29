@@ -7,4 +7,50 @@ $(document).ready(function(){
     // autoplaySpeed: 500
   });
 
+  // $('.review__slider-preview-item')
+  // 
+
+  $('.review__slider-big').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.review__slider-preview'
+  });
+
+  $('.review__slider-preview').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.review__slider-big',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true
+  });
+
+
+  function ratioPhoto(block) {
+    $(block).each(function(){
+      var itemWidth = $(this).width();
+      var itemHeight = $(this).height();
+      var itemRatio = itemHeight / itemWidth;
+
+      var photo = $(this).find('img');
+      var photoWidth = photo.width();
+      var photoHeight = photo.height();
+      var photoRatio = photoHeight / photoWidth;
+
+      if ( itemRatio < photoRatio ) {
+        photo.width('100%');
+      } else if (itemRatio > photoRatio) {
+        photo.height('100%');
+      } else {
+        photo.width('100%');
+      }
+    });
+  }
+
+  ratioPhoto('.review__slider-preview-item');
+  ratioPhoto('.review__slider-big-item');
+  
+
 });

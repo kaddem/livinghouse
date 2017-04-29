@@ -1,3 +1,70 @@
 .review{
   display: block;
+
+  &__inner {
+    .container(30px);
+  }
+
+  &__number {
+    display: inline-block;
+  }
+
+  &__title {
+    display: inline-block;
+  }
+
+  &__row {
+    .row(30px);
+  }
+
+  &__slider-box {
+    .col(30px, left);
+    .col12-8;
+  }
+
+  &__slider-content {
+    overflow: hidden;
+  }
+
+  &__slider-big {
+    height: 515px;
+    margin-bottom: 30px;
+  }
+
+  &__slider-big-item {
+    height: 100%;
+  }
+
+  &__big-photo {
+    min-height: 100%;
+  }
+
+  &__slider-big-item {
+    height: 515px;
+  }
+
+
+
+  &__slider-preview {
+    .row(30px);
+  }
+
+  &__slider-preview-item {
+    // width: 170px;
+    height: 120px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: hidden;
+  }
+
+  &__info-box {
+    .col(30px, left);
+    .col12-4;
+  }
+
+  & .slick-arrow {
+    top: -290px;
+    bottom: auto;
+  }
+
 }
