@@ -27,7 +27,9 @@ $(document).ready(function(){
     focusOnSelect: true
   });
 
+});
 
+$(window).load(function () {
   function ratioPhoto(block) {
     $(block).each(function(){
       var itemWidth = $(this).width();
@@ -75,5 +77,4 @@ $(document).ready(function(){
   ratioLetter('.review__letter-box');
   ratioLetter('.review__chart-box');
   ratioPhoto('.gallery__item');
-
 });
