@@ -7,10 +7,26 @@
 
   &__number {
     display: inline-block;
+    margin-right: 10px;
+    font-family: @lato;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.8px;
+    color: @green;
   }
 
   &__title {
     display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: @lato;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 1.5px;
+    color: @blue;
+    text-transform: uppercase;
   }
 
   &__row {
@@ -65,6 +81,37 @@
   & .slick-arrow {
     top: -290px;
     bottom: auto;
+  }
+
+  &__letter-box {
+    height: 515px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: solid 1px #e6e6e6;
+  }
+
+  &__letter {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__chart {
+    .col(30px, left);
+    .col12-6;
+  }
+
+  &__chart-box {
+    height: 120px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: solid 1px #e6e6e6;
+  }
+
+  &__chart-img {
+    display: block;
+    margin: 0 auto;
   }
 
 }
