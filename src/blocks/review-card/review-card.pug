@@ -1,0 +1,7 @@
+mixin review-card(num, title, imgSrc, imgAlt)
+  +b.review-card&attributes(attributes)
+    +e.head
+      +e.SPAN.number= num
+      +e.H2.title= title
+    +e.visual
+      +e.IMG.img(src= imgSrc, alt= imgAlt)

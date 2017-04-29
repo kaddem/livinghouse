@@ -1,0 +1,56 @@
+extends ../layout/_layoutBase.pug
+
+block content
+  +page-header
+    +e.logo
+      +logo("/index.html", "/img/logo.png", "Живой дом")
+    +e.info
+      .row
+        +phone("+7 (812) 648-29-49", "tel:+78126482949", "+7 (812) 955-05-07", "tel:+78129550507")
+        +main-nav
+          +main-nav-item("", "/projects.html", "Каталог проектов")
+            +subnav()
+          +main-nav-item("", "#", "Пиломатериалы")
+          +main-nav-item("--active", "#", "Отзывы")
+          +main-nav-item("", "#", "Контакты")
+
+  +b.MAIN.main
+    +breadcrumbs("Отзывы")
+      +breadcrumbs-link("/", "Главная")
+
+    +e.inner
+      +b.reviews-title Что говорят владельцы своих новых домов?
+    
+    +form-review()
+
+    +b.SECTION.reviews
+      +e.inner
+        +e.row
+          +e.item
+            +review-card("001", "Проект Любань", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("002", "Проект Отрадное", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("003", "Проект Приозерск", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("004", "Проект Гостилицы", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("005", "Проект Синявино", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("006", "Проект Выра", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("007", "Проект Рахъя", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("008", "Проект Ладога", "/img/review-card.jpg", "Фото проекта")
+          +e.item
+            +review-card("009", "Проект Тосно", "/img/review-card.jpg", "Фото проекта")
+
+        +pagination
+
+  +page-footer
+    +usefull
+      +footer-nav
+        +project-nav
+        +usefull-nav
+      +contacts("mailto:info@Lhspb.ru")
+    +juristic

@@ -1,0 +1,28 @@
+mixin form-review()
+  +b.form-review&attributes(attributes)
+    +e.inner
+      +e.FORM.form
+        +e.row
+          +e.item
+            +e.LABEL.label Тип проекта
+            +e.SELECT.select(placeholder="")
+              +e.OPTION Постоянное проживание
+              +e.OPTION Летнее проживание
+              +e.OPTION Осенне-весеннее проживание
+              +e.OPTION Временная регистрация
+              +e.OPTION Вид на жительство
+              +e.OPTION Green-card
+          +e.item
+            +e.LABEL.label Город
+            +e.SELECT.select(placeholder="")
+              +e.OPTION Санкт-Петербург
+              +e.OPTION Тосно
+              +e.OPTION Сестрорецк
+              +e.OPTION 47 км
+              +e.OPTION Грузино
+              +e.OPTION Нюнимяки
+          +e.item
+            +b.BUTTON.btn.--orange.--orange-fill Показать проекты
+            +e.box-checkbox
+              +e.INPUT.checkbox(type="checkbox", id="review-check")
+              +e.LABEL.label.--checkbox(for="review-check") Только видео-отзывы

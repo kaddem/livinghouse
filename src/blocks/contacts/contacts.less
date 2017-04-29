@@ -15,6 +15,7 @@
   }
 
   &__address {
+    position: relative;
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 15px;
@@ -25,6 +26,16 @@
     text-decoration: none;
     text-indent: 25px;
     color: #fff;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 13px;
+      height: 16px;
+      background-image: url(../img/icon-pin.svg);
+      background-repeat: no-repeat;
+    }
   }
 
   &__phone {

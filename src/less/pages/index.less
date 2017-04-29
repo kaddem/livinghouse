@@ -1,5 +1,5 @@
 .projects {
-  padding-top: 30px;
+  padding-bottom: 30px;
 
   &__inner {
     .container(30px);
@@ -12,7 +12,7 @@
   &__item {
     .col(30px, left);
     .col12-6;
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
 }
 
@@ -44,9 +44,46 @@
   }
 
   &__item {
+    position: relative;
     .col(30px, left);
     .col5-1;
     list-style: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 86px;
+      height: 30px;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2n) {
+      
+      &:before {
+        top: -20px;
+        left: 0;
+        transform: translateX(-50%);
+        background-image: url(../img/step-arrow-top.svg);
+      }
+    }
+
+    &:nth-child(2n+1) {
+      
+      &:before {
+        bottom: -20px;
+        left: 0;
+        transform: translateX(-50%);
+        background-image: url(../img/step-arrow-bottom.svg);
+      }
+    }
+
+    &:first-child {
+
+      &:before {
+        content: normal;
+      }
+    }
   }
 
   &__circle {
