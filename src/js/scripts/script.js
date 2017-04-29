@@ -74,5 +74,6 @@ $(document).ready(function(){
   ratioPhoto('.review__slider-big-item');
   ratioLetter('.review__letter-box');
   ratioLetter('.review__chart-box');
+  ratioPhoto('.gallery__item');
 
 });

@@ -1,3 +1,52 @@
 .quote{
-	display: block;
+  display: block;
+  padding-top: 160px;
+
+  &__inner {
+    .container(30px);
+  }
+
+  &__quote {
+    width: 65%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    font-family: @lato;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.46;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #333333;
+  }
+
+  &__signature {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    font-family: @lato;
+    font-size: 15px;
+    line-height: 1.67;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: @green;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      width: 60px;
+      height: 2px;
+      background-color: @green;
+    }
+  }
+
+  &__autor {
+    display: block;
+  }
 }

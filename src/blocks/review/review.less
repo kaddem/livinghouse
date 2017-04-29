@@ -81,6 +81,33 @@
   & .slick-arrow {
     top: -290px;
     bottom: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 2px #e6e6e6;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    &:before {
+      border-top: 3px solid #e0e0e0;
+    }
+  }
+
+  & .slick-prev {
+    left: 15px;
+
+    &:before {
+      border-left: 3px solid #e0e0e0;
+    }
+    
+  }
+
+  & .slick-next {
+    right: 15px;
+
+    &:before {
+      border-right: 3px solid #e0e0e0;
+    }
   }
 
   &__letter-box {

@@ -1,0 +1,17 @@
+mixin gallery()
+  +b.SECTION.gallery&attributes(attributes)
+    +e.inner
+      +e.H2.title Галерея наших работ
+    +e.box
+      +e.item
+        +e.IMG.photo(src="/img/review1.jpg")
+      +e.item
+        +e.IMG.photo(src="/img/review2.jpg")
+      +e.item
+        +e.IMG.photo(src="/img/review3.jpg")
+      +e.item
+        +e.IMG.photo(src="/img/project.jpg")
+      +e.item
+        +e.A.link(href="#")
+          +e.SPAN.link-text Посмотреть все
+        +e.IMG.photo(src="/img/review-card.jpg")

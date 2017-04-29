@@ -1,5 +1,8 @@
 mixin quote()
-	+b.SECTION.quote&attributes(attributes)
-		block
-		+e.inner
-			+e.P.title quote
+  +b.quote&attributes(attributes)
+    +e.inner
+      +e.BLOCKQUOTE.quote Завершено строительство сруба дома из бруса по адресу: Деревня Нурма, СНТ «Клён». Благодарность: Работникам компании «Живой Дом» бригадир Иван за своевременную и качественную работу по возведению сруба дома по проекту «Любань»
+        +e.P.signature 
+          +e.SPAN.autor Корец Владимир Николаевич
+          +e.SPAN.date 22.02.2017
+          +e.SPAN.location Санкт-Петербург
