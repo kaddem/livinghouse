@@ -77,4 +77,17 @@ $(window).load(function () {
   ratioLetter('.review__letter-box');
   ratioLetter('.review__chart-box');
   ratioPhoto('.gallery__item');
+
+
+  function tabs(boxTabsLink, boxTabsContent){ 
+    $(boxTabsLink + ' input').on('click', function(e){
+      var attrLink = $(this).attr('id');
+      $(boxTabsContent + ' .project-form__table-select').css("display", "none");
+      $(boxTabsContent + ' .' + attrLink).css("display", "block");
+ 
+    }); 
+  };
+
+
+  tabs('#tabs-roof', '#tabs-roof-content');
 });

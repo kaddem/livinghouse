@@ -22,7 +22,220 @@ block content
 
     +project("Проект дома Колтуши", "/img/project.jpg", "Фоточка дома", "/img/project-chart.jpg", "Схема")
       +b.A.btn.--green.--project(href="#") Заказать
+  
+    +b.SECTION.project-select
+      +e.inner
+        +e.H2.title Типы проекта и комплектация
+        +b.FORM.project-form(action="#")
+          +e.section
+            +e.tabs(id="tabs-frame")
+              +e.tabs-list
+                +e.INPUT.frame-radio(type="radio" name="type-frame" id="frame-1" checked)
+                +e.LABEL.frame-label(for="frame-1") 
+                  +e.STRONG.frame-title Каркасный дом
+                  +e.SPAN.frame-price от 200 000
+                +e.INPUT.frame-radio(type="radio" name="type-frame" id="frame-2")
+                +e.LABEL.frame-label(for="frame-2") 
+                  +e.STRONG.frame-title Брусовый дом
+                  +e.SPAN.frame-price от 300 000
+            +e.head
+              +e.row
+                +e.SPAN.complect-title Базовая комплектация
+                +e.btn-box
+                  +b.BUTTON.btn.--green.--change-form Получить смету проекта
+                +e.btn-box
+                  +b.BUTTON.btn.--green.--change-form Изменить комплектацию
+              +e.H3.title Каркас
+            +e.table
+              +e.table-select
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Обвязочный ряд из пиленого бруса сечением 150х200мм. Комплект детале
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Комплект крепежа
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
+                  +e.table-col.--value
+                    +e.SPAN 40 x 150 мм
 
+          +e.section
+            +e.head
+              +e.H3.title Кровля
+            +e.table
+              +e.tabs(id="tabs-roof")
+                +e.tabs-list
+                  +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-1" checked)
+                  +e.LABEL.tabs-label.--active(for="type-1") Ондулин
+                  +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-2")
+                  +e.LABEL.tabs-label(for="type-2") Металлочерепица
+                  +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-3")
+                  +e.LABEL.tabs-label(for="type-3") Мягкая кровля
+                  +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-4")
+                  +e.LABEL.tabs-label(for="type-4") Натуральная черепица
+                +e.SPAN.tabs-burger Изменить
+              +e.tabs-content(id="tabs-roof-content")
+                +e.table-select.--roof-content(class="type-1")
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Стропильная система из обрезной доски. Комплект деталей. Шаг стропил 580мм 
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Контррейка из пиленой доски. Комплект деталей
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Обрешетка из обрезной доски 20-25х100мм. комплект деталей
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Комплект крепежа
+                    +e.table-col.--value
+                    +e.table-col.--value
+
+                +e.table-select.--roof-content(class="type-2")
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Система под металлочерепицу
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Контррейка из пиленой доски. Комплект деталей
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Обрешетка из обрезной доски 20-25х100мм. комплект деталей
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Комплект крепежа
+                    +e.table-col.--value
+                    +e.table-col.--value
+
+                +e.table-select.--roof-content(class="type-3")
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Система под мягкую кровлю
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+
+                +e.table-select.--roof-content(class="type-4")
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Система под черепицу
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+
+          +e.section.--center
+            +e.head
+              +e.H3.title Добавить фундамент
+            +e.table
+              +e.table-select
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Винтовые сваи, шт.
+                  +e.table-col.quantity
+                  +e.table-col.price
+                  +e.table-col.action
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Лента
+                  +e.table-col.quantity
+                  +e.table-col.price
+                  +e.table-col.action
+                +e.table-row
+                  +e.table-col.--description
+                    +e.P.description Плита
+                  +e.table-col.quantity
+                  +e.table-col.price
+                  +e.table-col.action
+
+          +e.section.--btn
+            +b.BUTTON.btn.--orange.--orange-fill.--pr-form Сохранить
+
+    +b.select-info
+      +e.inner
+        +e.info
+          +e.P.text Сборка комплекта входит в стоимость.
+          +e.P.text Стоимость дома соответствует техническому описанию.
+
+    +gallery()
 
   +page-footer
     +usefull

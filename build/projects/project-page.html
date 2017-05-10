@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: http://ogp.me/ns#">
   <head>
-    <title>culture.ru</title>
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -28,13 +27,13 @@
     <meta name="twitter:description" content="culture.ru">
     <meta name="twitter:image" content="">
     <meta name="twitter:domain" content="http://culture.ru">
+    <title>culture.ru</title>
     <link rel="canonical" href="/">
     <link rel="image_src" href="#">
     <link rel="shortlink" href="#">
     <link type="text/plain" rel="author" href="humans.txt">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -175,6 +174,343 @@
           </div>
         </div>
       </section>
+      <section class="project-select">
+        <div class="project-select__inner">
+          <h2 class="project-select__title">Типы проекта и комплектация</h2>
+          <form class="project-form" action="#">
+            <div class="project-form__section">
+              <div class="project-form__tabs" id="tabs-frame">
+                <div class="project-form__tabs-list">
+                  <input class="project-form__frame-radio" type="radio" name="type-frame" id="frame-1" checked="checked" />
+                  <label class="project-form__frame-label" for="frame-1">
+                    <strong class="project-form__frame-title">Каркасный дом</strong>
+                    <span class="project-form__frame-price">от 200 000</span>
+                  </label>
+                  <input class="project-form__frame-radio" type="radio" name="type-frame" id="frame-2" />
+                  <label class="project-form__frame-label" for="frame-2">
+                    <strong class="project-form__frame-title">Брусовый дом</strong>
+                    <span class="project-form__frame-price">от 300 000</span>
+                  </label>
+                </div>
+              </div>
+              <div class="project-form__head">
+                <div class="project-form__row">
+                  <span class="project-form__complect-title">Базовая комплектация</span>
+                  <div class="project-form__btn-box">
+                    <button class="btn btn--green btn--change-form">Получить смету проекта</button>
+                  </div>
+                  <div class="project-form__btn-box">
+                    <button class="btn btn--green btn--change-form">Изменить комплектацию</button>
+                  </div>
+                </div>
+                <h3 class="project-form__title">Каркас</h3>
+              </div>
+              <div class="project-form__table">
+                <div class="project-form__table-select">
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Обвязочный ряд из пиленого бруса сечением 150х200мм. Комплект детале</p>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                  </div>
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм</p>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                  </div>
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                  </div>
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                  </div>
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Комплект крепежа</p>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                    <div class="project-form__table-col project-form__table-col--value">
+                      <span>40 x 150 мм</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-form__section">
+              <div class="project-form__head">
+                <h3 class="project-form__title">Кровля</h3>
+              </div>
+              <div class="project-form__table">
+                <div class="project-form__tabs" id="tabs-roof">
+                  <div class="project-form__tabs-list">
+                    <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-1" checked="checked" />
+                    <label class="project-form__tabs-label project-form__tabs-label--active" for="type-1">Ондулин</label>
+                    <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-2" />
+                    <label class="project-form__tabs-label" for="type-2">Металлочерепица</label>
+                    <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-3" />
+                    <label class="project-form__tabs-label" for="type-3">Мягкая кровля</label>
+                    <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-4" />
+                    <label class="project-form__tabs-label" for="type-4">Натуральная черепица</label>
+                  </div>
+                  <span class="project-form__tabs-burger">Изменить</span>
+                </div>
+                <div class="project-form__tabs-content" id="tabs-roof-content">
+                  <div class="project-form__table-select project-form__table-select--roof-content type-1">
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Стропильная система из обрезной доски. Комплект деталей. Шаг стропил 580мм </p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Контррейка из пиленой доски. Комплект деталей</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Обрешетка из обрезной доски 20-25х100мм. комплект деталей</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Комплект крепежа</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value"></div>
+                      <div class="project-form__table-col project-form__table-col--value"></div>
+                    </div>
+                  </div>
+                  <div class="project-form__table-select project-form__table-select--roof-content type-2">
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Система под металлочерепицу</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Контррейка из пиленой доски. Комплект деталей</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Обрешетка из обрезной доски 20-25х100мм. комплект деталей</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Комплект крепежа</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value"></div>
+                      <div class="project-form__table-col project-form__table-col--value"></div>
+                    </div>
+                  </div>
+                  <div class="project-form__table-select project-form__table-select--roof-content type-3">
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Система под мягкую кровлю</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-form__table-select project-form__table-select--roof-content type-4">
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Система под черепицу</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Фронтоны из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-form__section project-form__section--center">
+              <div class="project-form__head">
+                <h3 class="project-form__title">Добавить фундамент</h3>
+              </div>
+              <div class="project-form__table">
+                <div class="project-form__table-select">
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Винтовые сваи, шт.</p>
+                    </div>
+                    <div class="project-form__table-col quantity"></div>
+                    <div class="project-form__table-col price"></div>
+                    <div class="project-form__table-col action"></div>
+                  </div>
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Лента</p>
+                    </div>
+                    <div class="project-form__table-col quantity"></div>
+                    <div class="project-form__table-col price"></div>
+                    <div class="project-form__table-col action"></div>
+                  </div>
+                  <div class="project-form__table-row">
+                    <div class="project-form__table-col project-form__table-col--description">
+                      <p class="project-form__description">Плита</p>
+                    </div>
+                    <div class="project-form__table-col quantity"></div>
+                    <div class="project-form__table-col price"></div>
+                    <div class="project-form__table-col action"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-form__section project-form__section--btn">
+              <button class="btn btn--orange btn--orange-fill btn--pr-form">Сохранить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <div class="select-info">
+        <div class="select-info__inner">
+          <div class="select-info__info">
+            <p class="select-info__text">Сборка комплекта входит в стоимость.</p>
+            <p class="select-info__text">Стоимость дома соответствует техническому описанию.</p>
+          </div>
+        </div>
+      </div>
+      <section class="gallery">
+        <div class="gallery__inner"></div>
+        <div class="gallery__box">
+          <div class="gallery__item">
+            <img class="gallery__photo" src="/img/review1.jpg" alt="" role="presentation" />
+          </div>
+          <div class="gallery__item">
+            <img class="gallery__photo" src="/img/review2.jpg" alt="" role="presentation" />
+          </div>
+          <div class="gallery__item">
+            <img class="gallery__photo" src="/img/review3.jpg" alt="" role="presentation" />
+          </div>
+          <div class="gallery__item">
+            <img class="gallery__photo" src="/img/project.jpg" alt="" role="presentation" />
+          </div>
+          <div class="gallery__item">
+            <a class="gallery__link" href="#">
+              <span class="gallery__link-text">Посмотреть все</span>
+            </a>
+            <img class="gallery__photo" src="/img/review-card.jpg" alt="" role="presentation" />
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__main">
@@ -252,6 +588,8 @@
         </div>
       </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/js/vendor.min.js"></script>
     <script src="/js/script.min.js"></script>
   </body>
 </html>

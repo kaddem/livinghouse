@@ -69,7 +69,8 @@ const path = {
     // html: ['src/html/**/*.pug', '!src/html/**/_*.pug', '!src/html/partials/abstracts/bemto/**/*.*'],
     pug: 'src/pug/pages/**/*.pug',
     htmlDir: 'src/pug/pages/',
-    js: 'src/js/**/*.js',
+    jsVendor: 'src/js/vendor/*.js',
+    jsScripts: 'src/js/scripts/*.js',
     less: 'src/less/*.less',
     img: ['src/img/**/*.*', '!src/img/png-sprite/*.*'],
     fonts: 'src/fonts/**/*.*',
@@ -127,17 +128,31 @@ gulp.task('less', function () {
 
 // Compilation js v2 
 // (If jquery is used from 3rd party, and you need to exclude it from script.min.js, you should manually put all required .js files into path.src.js directory)
-gulp.task('js', function() {
-  return gulp.src(path.src.js)
+gulp.task('jsVendor', function() {
+  return gulp.src(path.src.jsVendor)
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(debug({title: 'js init'}))
+    .pipe(debug({title: 'jsV init'}))
+    .pipe(plumber({ errorHandler: onError }))
+    .pipe(concat('vendor.min.js'))
+    .pipe(debug({title: 'jsV concat'}))
+    // .pipe(uglify())
+    // .pipe(debug({title: 'jsV uglify'}))
+    .pipe(sourcemaps.write())
+    .pipe(debug({title: 'jsV map'}))
+    .pipe(gulp.dest(path.build.js))
+});
+
+gulp.task('jsScripts', function() {
+  return gulp.src(path.src.jsScripts)
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(debug({title: 'jsS init'}))
     .pipe(plumber({ errorHandler: onError }))
     .pipe(concat('script.min.js'))
-    .pipe(debug({title: 'js concat'}))
-    .pipe(uglify())
-    .pipe(debug({title: 'js uglify'}))
-    .pipe(sourcemaps.write('/'))
-    .pipe(debug({title: 'js map'}))
+    .pipe(debug({title: 'jsS concat'}))
+    // .pipe(uglify())
+    // .pipe(debug({title: 'jsS uglify'}))
+    .pipe(sourcemaps.write())
+    .pipe(debug({title: 'jsS map'}))
     .pipe(gulp.dest(path.build.js))
 });
 
@@ -186,7 +201,7 @@ gulp.task('clean', function () {
 });
 
 // Overall build
-gulp.task('build', gulp.series('clean', gulp.parallel('png-sprites', 'pug', 'fonts', 'js' , gulp.parallel('img', 'less'))));
+gulp.task('build', gulp.series('clean', gulp.parallel('png-sprites', 'pug', 'fonts', 'jsVendor', 'jsScripts' , gulp.parallel('img', 'less'))));
 
 
 // Server config
@@ -213,7 +228,7 @@ gulp.task('watch', function(){
   gulp.watch(path.watch.pug, gulp.series('pug'));
   gulp.watch(path.watch.less, gulp.series('less'));
   gulp.watch(path.watch.img, gulp.series('img'));
-  gulp.watch(path.watch.js, gulp.series('js'));
+  gulp.watch(path.watch.js, gulp.series('jsVendor', 'jsScripts'));
   gulp.watch(path.watch.fonts, gulp.series('fonts'));
 });
 
