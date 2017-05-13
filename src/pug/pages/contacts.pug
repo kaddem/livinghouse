@@ -1,0 +1,79 @@
+extends ../layout/_layoutBase.pug
+
+block content
+  +page-header()
+    +e.logo
+      +logo("/index.html", "/img/logo.png", "Живой дом")
+    +e.info
+      .row
+        +phone("+7 (812) 648-29-49", "tel:+78126482949", "+7 (812) 955-05-07", "tel:+78129550507")
+        +main-nav
+          +main-nav-item("", "/projects.html", "Каталог проектов")
+            +subnav()
+          +main-nav-item("", "#", "Пиломатериалы")
+          +main-nav-item("", "/reviews.html", "Отзывы")
+          +main-nav-item("--active", "#", "Контакты")
+
+  +b.MAIN
+    +breadcrumbs("Контакты")
+      +breadcrumbs-link("/", "Главная")
+
+    +b.contact-info
+      +e.inner
+        +e.row
+          +e.map
+            +b.map#map
+          +e.contacts
+            +e.H1.title Офис продаж
+            +e.P.address Санкт-Петербург, Ломоносовский район, д. Яльгелево
+            +e.P.time
+              +e.SPAN.time-work пн — сб с 9:00 до 18:00
+              +e.SPAN.time-holly воскресение — выходной
+            +e.phone
+              +e.A.number(href="tel:+78126482949") +7 (812) 648-29-49
+              +e.A.number(href="tel:+78129550507") +7 (812) 955-05-07
+            +e.A.mail(href="mailto:info@Lhspb.ru") info@Lhspb.ru
+          +e.how-drive
+            +e.H2.title Как добраться
+            +e.transport.--public
+              +e.P.metro м.Ленинский проспект
+              +e.P.taxi Маршрутное такси:
+                +e.SPAN.taxi-num № К-639а К-639в
+              +e.P.steps остановки:
+                +e.SPAN.steps-title Яльгелево 36
+                +e.SPAN.steps-title Яльгелево 19
+            +e.transport.--personal
+              +e.A.coordinate-link(href="#")
+                +e.SPAN.coordinate 59.722685°
+                +e.SPAN.coordinate 29.943971°
+
+    +b.contact-form
+      +e.inner
+        +e.H2.title Напишите нам
+        +e.FORM.form(action="#")
+          +e.row
+            +e.field
+              +e.LABEL.label Ваше имя
+              +e.INPUT.input(placeholder="Ваня Иванов")
+            +e.field
+              +e.LABEL.label Телефон
+              +e.INPUT.input(placeholder="+7 (___) ___-__-__")
+            +e.field
+              +e.LABEL.label Электронная почта
+              +e.INPUT.input(placeholder="ivanov.ivan@email.ru")
+          +e.row
+            +e.field.--textarea
+              +e.TEXTAREA.textarea(placeholder="Напишите сообщение или вопрос")
+          +b.BUTTON.btn.--green Отправить
+
+  +page-footer
+    +usefull
+      +footer-nav
+        +project-nav
+        +usefull-nav
+      +contacts("mailto:info@Lhspb.ru")
+    +juristic
+
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2KAc1Xd-qzY7q6aUh_CxpTcm082TLx4I&callback=initMap" async defer)
+
+  

@@ -29,17 +29,35 @@
 
     &:before {
       content: '';
-      display: block;
       position: absolute;
-      width: 13px;
-      height: 16px;
-      background-image: url(../img/icon-pin.svg);
-      background-repeat: no-repeat;
+      left: 0;
+      top: 0;
+      display: block;
+      .sprite(@icon-pin-white-2x);
+      background-size: @icon-balcony-2x-total-width/2 @icon-balcony-2x-total-height/2;
+      width: @icon-pin-white-2x-width/2;
+      height: @icon-pin-white-2x-height/2;
+      background-position: @icon-pin-white-2x-offset-x/2 @icon-pin-white-2x-offset-y/2;
     }
   }
 
   &__phone {
+    position: relative;
     margin-bottom: 15px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      .sprite(@icon-phone-white-2x);
+      background-size: @icon-balcony-2x-total-width/2 @icon-balcony-2x-total-height/2;
+      width: @icon-phone-white-2x-width/2;
+      height: @icon-phone-white-2x-height/2;
+      background-position: @icon-phone-white-2x-offset-x/2 @icon-phone-white-2x-offset-y/2;
+      
+    }
   }
 
   &__number {
@@ -58,7 +76,8 @@
   }
 
   &__mail {
-    margin-left: 25px;
+    position: relative;
+    padding-left: 25px;
     margin-bottom: 15px;
     display: inline-block;
     font-family: @lato;
@@ -67,9 +86,25 @@
     line-height: 18px;
     color: #fff;
     text-decoration: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: block;
+      .sprite(@icon-mail-white-2x);
+      background-size: @icon-balcony-2x-total-width/2 @icon-balcony-2x-total-height/2;
+      width: @icon-mail-white-2x-width/2;
+      height: @icon-mail-white-2x-height/2;
+      background-position: @icon-mail-white-2x-offset-x/2 @icon-mail-white-2x-offset-y/2;
+    }
   }
 
   &__time {
+    position: relative;
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
@@ -80,5 +115,18 @@
     text-indent: 25px;
     color: #fff;
     text-decoration: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      .sprite(@icon-clock-white-2x);
+      background-size: @icon-balcony-2x-total-width/2 @icon-balcony-2x-total-height/2;
+      width: @icon-clock-white-2x-width/2;
+      height: @icon-clock-white-2x-height/2;
+      background-position: @icon-clock-white-2x-offset-x/2 @icon-clock-white-2x-offset-y/2;
+    }
   }
 }

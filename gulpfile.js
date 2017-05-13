@@ -168,11 +168,14 @@ gulp.task('img', function () {
 
 // Creation png-sprites
 gulp.task('png-sprites', function () {
-  var spriteData = gulp.src(path.src.pngSprites)
+  var spriteData = gulp.src('src/img/png-sprite/*.png')
     .pipe(spritesmith({
+      // retinaSrcFilter: ['src/img/png-sprite/*@2x.png'],
       imgName: 'png-sprite.png',
+      // retinaImgName: 'png-sprite@2x.png',
       imgPath: '../img/png-sprite.png',
-      padding: 1,
+      // retinaImgPath: '../img/png-sprite@2x.png',
+      padding: 4,
       cssFormat: 'less',
       algorithm: 'binary-tree',
       cssName: '_png-sprite.less'

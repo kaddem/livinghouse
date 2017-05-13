@@ -43,10 +43,13 @@ $(window).load(function () {
 
       if ( itemRatio < photoRatio ) {
         photo.width('100%');
+        photo.height('auto');
       } else if (itemRatio > photoRatio) {
         photo.height('100%');
+        photo.width('auto');
       } else {
         photo.width('100%');
+        photo.height('auto');
       }
     });
   }
@@ -77,7 +80,9 @@ $(window).load(function () {
   ratioLetter('.review__letter-box');
   ratioLetter('.review__chart-box');
   ratioPhoto('.gallery__item');
-
+  ratioPhoto('.project-card__photo');
+  ratioPhoto('.review-card__visual');
+  ratioPhoto('.project__photo');
 
   function tabs(boxTabsLink, boxTabsContent){ 
     $(boxTabsLink + ' input').on('click', function(e){

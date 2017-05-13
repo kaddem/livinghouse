@@ -12,7 +12,12 @@
     margin: auto;
     content: '';
     display: block;
-    .sprite(@icon-phone-fill);
+    .sprite(@icon-phone-blue-2x);
+    width: @icon-phone-blue-2x-width/2;
+    height: @icon-phone-blue-2x-height/2;
+    background-position: @icon-phone-blue-2x-offset-x/2 @icon-phone-blue-2x-offset-y/2;
+    background-size: @icon-balcony-2x-total-width/2 @icon-balcony-2x-total-height/2;
+    // .sprite(@icon-phone-fill);
   }
 
   &__number {

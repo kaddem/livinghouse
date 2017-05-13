@@ -1,12 +1,13 @@
 .quote{
   display: block;
-  padding-top: 160px;
+  padding-top: 60px;
 
   &__inner {
     .container(30px);
   }
 
   &__quote {
+    // position: relative;
     width: 65%;
     margin: 0 auto;
     padding-bottom: 30px;
@@ -17,6 +18,18 @@
     letter-spacing: 0.5px;
     text-align: center;
     color: #333333;
+
+    &:before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 30px;
+      .sprite(@icon-dialog-green-2x);
+      width: @icon-dialog-green-2x-width/2+2;
+      height: @icon-dialog-green-2x-height/2+2;
+      background-size: @icon-balcony-2x-total-width/2+1 @icon-balcony-2x-total-height/2;
+      background-position: @icon-dialog-green-2x-offset-x/2 @icon-dialog-green-2x-offset-y/2;
+    }
   }
 
   &__signature {
