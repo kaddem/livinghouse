@@ -1,11 +1,29 @@
 .main-nav{
 	display: block;
-  margin-top: 20px;
+
+  @media screen and (min-width: @width_tablet){
+    display: block;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    display: block;
+    margin-top: 20px;
+  }
 
   &__list {
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
     text-align: right;
+
+    @media screen and (min-width: @width_tablet){
+      // width: @container_tablet;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      display: block;
+      margin-top: 20px;
+    }
   }
 }

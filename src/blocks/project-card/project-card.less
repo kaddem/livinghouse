@@ -17,22 +17,59 @@
 
   &__visual {
     .col(30px, left);
-    .col12-6;
+    // .col12-6;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-7;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-6;
+    }
   }
 
   &__photo {
     height: 200px;
     overflow: hidden;
+
+    @media screen and (min-width: @width_tablet){
+      position: relative;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      height: 200px;
+      overflow: hidden;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
-    // height: 100%;
+    
+    @media screen and (min-width: @width_tablet){
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      position: static;
+    }
   }
 
   &__chart {
     .row(0);
+
+    @media screen and (min-width: @width_tablet){
+      height: 150px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   &__chart-item {
@@ -41,6 +78,16 @@
     padding-top: 8px;
     padding-bottom: 8px;
     border-right: 1px solid @border-card;
+
+    @media screen and (min-width: @width_tablet){
+      .col(90px, left);
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   &__chart-title {
@@ -60,6 +107,14 @@
     .col(30px, left);
     .col12-6;
     padding-top: 30px;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-5;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-6;
+    }
   }
 
   &__content {

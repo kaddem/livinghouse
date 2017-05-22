@@ -3,11 +3,19 @@
 
   &__item {
     position: relative;
-    padding-top: 230px;
+    padding-top: 150px;
     min-height: 600px;
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
+
+    @media screen and (min-width: @width_tablet){
+      padding-top: 180px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      padding-top: 230px;
+    }
 
     &:before {
       content: '';
@@ -27,6 +35,16 @@
     position: relative;
     .container(30px);
     z-index: 20;
+
+    @media screen and (min-width: @width_tablet){
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   &__info {

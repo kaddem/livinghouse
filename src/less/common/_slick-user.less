@@ -58,7 +58,15 @@
 }
 
 .slick-prev {
-  left: 30px;
+  // left: 30px;
+
+  @media screen and (min-width: @width_tablet){
+    left: 5px;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    left: 30px;
+  }
   
   &:before {
     left: 2px;
@@ -68,7 +76,15 @@
 }
 
 .slick-next {
-  right: 30px;
+  
+
+  @media screen and (min-width: @width_tablet){
+    right: 5px;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    right: 30px;
+  }
 
   &:before {
     right: 2px;
