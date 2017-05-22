@@ -31,7 +31,7 @@ block content
             +e.tabs(id="tabs-frame")
               +e.tabs-list
                 +e.INPUT.frame-radio(type="radio" name="type-frame" id="frame-1" checked)
-                +e.LABEL.frame-label(for="frame-1") 
+                +e.LABEL.frame-label.--active(for="frame-1") 
                   +e.STRONG.frame-title Каркасный дом
                   +e.SPAN.frame-price от 200 000
                 +e.INPUT.frame-radio(type="radio" name="type-frame" id="frame-2")
@@ -42,47 +42,88 @@ block content
               +e.row
                 +e.SPAN.complect-title Базовая комплектация
                 +e.btn-box
-                  +b.BUTTON.btn.--green.--change-form Получить смету проекта
+                  +b.BUTTON.btn.--green.--change-form.--estimate Получить смету проекта
                 +e.btn-box
-                  +b.BUTTON.btn.--green.--change-form Изменить комплектацию
-              +e.H3.title Каркас
-            +e.table
-              +e.table-select
-                +e.table-row
-                  +e.table-col.--description
-                    +e.P.description Обвязочный ряд из пиленого бруса сечением 150х200мм. Комплект детале
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                +e.table-row
-                  +e.table-col.--description
-                    +e.P.description Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                +e.table-row
-                  +e.table-col.--description
-                    +e.P.description Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                +e.table-row
-                  +e.table-col.--description
-                    +e.P.description Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                +e.table-row
-                  +e.table-col.--description
-                    +e.P.description Комплект крепежа
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
-                  +e.table-col.--value
-                    +e.SPAN 40 x 150 мм
+                  +b.BUTTON.btn.--green.--change-form.--gear Изменить комплектацию
+              
+            +e.table(id="tabs-frame-content")
+              +e.tab-item(class="frame-1")
+                +e.H3.title Каркас
+                +e.table-select
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Карка с сечением 150х200мм. Комплект детале
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Комплект крепежа
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+
+              +e.tab-item(class="frame-2")
+                +e.H3.title Брус
+                +e.table-select
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Обвязочный ряд из пиленого бруса сечением 150х200мм. Комплект детале
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                  +e.table-row
+                    +e.table-col.--description
+                      +e.P.description Комплект крепежа
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
+                    +e.table-col.--value
+                      +e.SPAN 40 x 150 мм
 
           +e.section
             +e.head

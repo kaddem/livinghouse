@@ -182,7 +182,7 @@
               <div class="project-form__tabs" id="tabs-frame">
                 <div class="project-form__tabs-list">
                   <input class="project-form__frame-radio" type="radio" name="type-frame" id="frame-1" checked="checked" />
-                  <label class="project-form__frame-label" for="frame-1">
+                  <label class="project-form__frame-label project-form__frame-label--active" for="frame-1">
                     <strong class="project-form__frame-title">Каркасный дом</strong>
                     <span class="project-form__frame-price">от 200 000</span>
                   </label>
@@ -197,69 +197,131 @@
                 <div class="project-form__row">
                   <span class="project-form__complect-title">Базовая комплектация</span>
                   <div class="project-form__btn-box">
-                    <button class="btn btn--green btn--change-form">Получить смету проекта</button>
+                    <button class="btn btn--green btn--change-form btn--estimate">Получить смету проекта</button>
                   </div>
                   <div class="project-form__btn-box">
-                    <button class="btn btn--green btn--change-form">Изменить комплектацию</button>
+                    <button class="btn btn--green btn--change-form btn--gear">Изменить комплектацию</button>
                   </div>
                 </div>
-                <h3 class="project-form__title">Каркас</h3>
               </div>
-              <div class="project-form__table">
-                <div class="project-form__table-select">
-                  <div class="project-form__table-row">
-                    <div class="project-form__table-col project-form__table-col--description">
-                      <p class="project-form__description">Обвязочный ряд из пиленого бруса сечением 150х200мм. Комплект детале</p>
+              <div class="project-form__table" id="tabs-frame-content">
+                <div class="project-form__tab-item frame-1">
+                  <h3 class="project-form__title">Каркас</h3>
+                  <div class="project-form__table-select">
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Карка с сечением 150х200мм. Комплект детале</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                    </div>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Комплект крепежа</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
                   </div>
-                  <div class="project-form__table-row">
-                    <div class="project-form__table-col project-form__table-col--description">
-                      <p class="project-form__description">Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм</p>
+                </div>
+                <div class="project-form__tab-item frame-2">
+                  <h3 class="project-form__title">Брус</h3>
+                  <div class="project-form__table-select">
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Обвязочный ряд из пиленого бруса сечением 150х200мм. Комплект детале</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Балки перекрытий из обрезной. Комплект деталей. Шаг балок 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="project-form__table-row">
-                    <div class="project-form__table-col project-form__table-col--description">
-                      <p class="project-form__description">Силовой каркас из обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
-                    </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
-                    </div>
-                  </div>
-                  <div class="project-form__table-row">
-                    <div class="project-form__table-col project-form__table-col--description">
-                      <p class="project-form__description">Межкомнатные перегородки обрезной доски. Комплект деталей. Шаг стоек 580мм</p>
-                    </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
-                    </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
-                    </div>
-                  </div>
-                  <div class="project-form__table-row">
-                    <div class="project-form__table-col project-form__table-col--description">
-                      <p class="project-form__description">Комплект крепежа</p>
-                    </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
-                    </div>
-                    <div class="project-form__table-col project-form__table-col--value">
-                      <span>40 x 150 мм</span>
+                    <div class="project-form__table-row">
+                      <div class="project-form__table-col project-form__table-col--description">
+                        <p class="project-form__description">Комплект крепежа</p>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
+                      <div class="project-form__table-col project-form__table-col--value">
+                        <span>40 x 150 мм</span>
+                      </div>
                     </div>
                   </div>
                 </div>
