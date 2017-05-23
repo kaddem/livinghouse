@@ -1,6 +1,16 @@
 .juristic {
   .col(30px, left);
-  .col12-3;
+  .col12-12;
+  padding-top: 30px;
+
+  @media screen and (min-width: @width_tablet){
+
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    .col12-3;
+    padding-top: 0;
+  }
 
   &__text {
     margin-top: 30px;

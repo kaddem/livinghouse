@@ -12,6 +12,26 @@ button {
 
 .main {
 
+  @media screen and (min-width: @width_tablet){
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    margin-top: 127px;
+  }
+
+  &--index {
+    margin-top: 0;
+
+    @media screen and (min-width: @width_tablet){
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      margin-top: 0;
+    }
+  }
+
   &__inner {
     .container(30px);
   }

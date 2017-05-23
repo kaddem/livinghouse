@@ -1,6 +1,14 @@
 .usefull{
   .col(30px, right);
-  .col12-9;
+  .col12-12;
+
+  @media screen and (min-width: @width_tablet){
+
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    .col12-9;
+  }
 
   &__row {
     .row(30px);

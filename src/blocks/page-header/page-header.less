@@ -1,9 +1,15 @@
 .page-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: solid 1px #f1f0ee;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  border-bottom: solid 1px #f1f0ee; 
+  transition: all .3s ease; 
 
   @media screen and (min-width: @width_tablet){
     // width: @container_tablet;
@@ -11,18 +17,37 @@
 
   @media screen and (min-width: @width_desktop_min){
     // width: @container_desktop_min;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   &--index {
-    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    border-bottom: none;
+    border-bottom: solid 1px transparent;
+  }
+
+  &--scroll {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: none;
+    background-color: #fff;
+    border-bottom: solid 1px #f1f0ee;
+  }
+
+  &--open {
+    background-color: #fff;
   }
   
   &__inner {
+    position: relative;
     .container(30px)
   }
 
@@ -37,8 +62,41 @@
 
   &__info {
     .col(30px, left);
-    .col12-9;
-    padding-top: 9px;
+    .col12-7;
+    padding-top: 12px;
     text-align: right;
+
+    @media screen and (min-width: @width_tablet){
+
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-9;
+      padding-top: 9px;
+    }
+  }
+
+
+  &--desktop {
+    
+    @media screen and (min-width: @width_desktop_min){
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .page-header__logo {
+      .col12-1;
+      padding-right: 9px;
+    }
+
+    .page-header__info {
+      .col12-11;
+
+      & > .row {
+        .row(30px);
+      }
+
+    }
+
   }
 }

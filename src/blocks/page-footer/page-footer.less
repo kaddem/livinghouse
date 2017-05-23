@@ -16,7 +16,7 @@
   }
 
   &__error-message {
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 15px;
     font-family: @lato;
     font-weight: normal;
@@ -24,6 +24,14 @@
     line-height: 22px;
     letter-spacing: .5px;
     color: #fff;
+
+    @media screen and (min-width: @width_tablet){
+
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      margin-top: 80px;
+    }
   }
 
   &__copyright {
