@@ -55,7 +55,7 @@
   }
 
   &__cost {
-    width: 170px;
+    width: 100%;
     height: 50px;
     box-sizing: border-box;
     padding-top: 18px;
@@ -71,8 +71,25 @@
     letter-spacing: 1px;
     background-color: transparent;
 
+    @media screen and (min-width: @width_tablet){
+      width: 170px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
+
     &--start {
       float: left;
+      margin-bottom: 15px;
+
+      @media screen and (min-width: @width_tablet){
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+
+      }
     }
 
     &--end {

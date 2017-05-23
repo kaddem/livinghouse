@@ -3,7 +3,7 @@ extends ../layout/_layoutBase.pug
 block content
   +page-header("--index")
     +e.logo
-      +logo("/index.html", "/img/logo.png", "Живой дом")
+      +logo("/index.html", "/img/logo@2x.png", "/img/logo-mini@2x.png", "Живой дом")
     +e.info
       .row
         +phone("+7 (812) 648-29-49", "tel:+78126482949", "+7 (812) 955-05-07", "tel:+78129550507")
@@ -15,6 +15,7 @@ block content
           +main-nav-item("", "/contacts.html", "Контакты")
     +b.DIV.burger.--open
       span
+
 
   +b.MAIN.main.--index
     +promo()

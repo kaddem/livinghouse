@@ -1,4 +1,5 @@
-mixin logo(href, urlImg, alt)
+mixin logo(href, urlImgFull, urlImgMini, alt)
   +b.A.logo(href= href)
     block
-    +e.IMG.img(src= urlImg, alt= alt)
+    +e.IMG.img.--mini(src= urlImgMini, alt= alt)
+    +e.IMG.img.--full(src= urlImgFull, alt= alt)

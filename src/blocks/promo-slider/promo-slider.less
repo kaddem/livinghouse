@@ -4,7 +4,7 @@
   &__item {
     position: relative;
     padding-top: 100px;
-    min-height: 600px;
+    min-height: 400px;
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
@@ -80,9 +80,17 @@
   &__price {
     font-family: @lato;
     font-weight: bold;
-    font-size: 55px;
+    font-size: 40px;
     letter-spacing: .6px;
     color: @blue-dark;
+
+    @media screen and (min-width: @width_tablet){
+      font-size: 55px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 }
 

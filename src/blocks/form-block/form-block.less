@@ -1,14 +1,14 @@
 .form-block{
   display: block;
+  position: relative;
 
   &__inner {
     .container(30px);
-    position: relative;
+    
     padding-top: 30px;
     padding-bottom: 30px;
 
     @media screen and (min-width: @width_tablet){
-      
     }
 
     @media screen and (min-width: @width_desktop_min){
@@ -81,7 +81,7 @@
   }
 
   &__border {
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
@@ -90,7 +90,7 @@
     
 
     @media screen and (min-width: @width_tablet){
-      
+      padding-top: 60px;
     }
 
     @media screen and (min-width: @width_desktop_min){
@@ -126,13 +126,22 @@
   &__title {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 24px;
-    line-height: 35px;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: 1.5px;
     font-family: @lato;
     font-weight: bold;
     text-transform: uppercase;
     color: @blue;
+
+    @media screen and (min-width: @width_tablet){
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__text {
