@@ -5,8 +5,15 @@
 
   &__inner {
     .container(30px);
-    padding-left: 105px;
-    padding-right: 105px;
+
+    @media screen and (min-width: @width_tablet){
+
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      padding-left: 105px;
+      adding-right: 105px;
+    }
   }
 
   &__row {
@@ -14,13 +21,29 @@
   }
 
   &__form {
-    padding: 60px;
+    padding: 15px;
     border: solid 3px @blue;
+
+    @media screen and (min-width: @width_tablet){
+      padding: 30px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      padding: 60px;
+    }
   }
 
   &__item {
     .col(30px, left);
-    .col12-4;
+    .col12-12;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-6;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-4;
+    }
 
     &:last-child {
       padding-top: 22px;

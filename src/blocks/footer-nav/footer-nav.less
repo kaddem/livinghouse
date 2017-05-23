@@ -1,6 +1,14 @@
 .footer-nav{
   .col(30px, left);
-  .col12-8;
+  .col12-12;
+
+  @media screen and (min-width: @width_tablet){
+    .col12-8;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+
+  }
 
   &__row {
     .row(30px);

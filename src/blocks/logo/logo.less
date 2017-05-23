@@ -1,9 +1,28 @@
 .logo{
   display: block;
+  overflow: hidden;
+
+  @media screen and (min-width: @width_tablet){
+
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+
+  }
 
   &__img {
     display: block;
-    width: 100%;
+    width: auto;
+    height: 100%;
+
+    @media screen and (min-width: @width_tablet){
+      height: auto;
+      width: 100%;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 }
 

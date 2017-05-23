@@ -10,11 +10,12 @@
   }
 
   &__item {
-    .col(30px, left);
-    .col12-6;
+    .col(0, left);
+    .col12-12;
     margin-top: 30px;
 
     @media screen and (min-width: @width_tablet){
+      .col(30px, left);
       .col12-12;
     }
 
@@ -33,8 +34,6 @@
   }
 
   &__title {
-    margin-top: 0;
-    margin-bottom: 60px;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 1.6px;
@@ -43,6 +42,15 @@
     font-weight: bold;
     text-transform: uppercase;
     color: @blue-dark;
+
+    @media screen and (min-width: @width_tablet){
+      margin-top: 0;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__list {
@@ -53,10 +61,18 @@
   }
 
   &__item {
-    position: relative;
-    .col(30px, left);
-    .col5-1;
+    margin-bottom: 15px;
     list-style: none;
+
+    @media screen and (min-width: @width_tablet){
+      .col(30px, left);
+      .col5-1;
+      position: relative;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
 
     &:before {
 
@@ -119,14 +135,13 @@
   }
 
   &__circle {
-    // margin: 0 auto;
-    box-sizing: border-box;
-    border: 3px solid @green;
-    border-radius: 50%;
 
     @media screen and (min-width: @width_tablet){
       width: 100%;
       height: 124px;
+      box-sizing: border-box;
+      border: 3px solid @green;
+      border-radius: 50%;
     }
 
     @media screen and (min-width: @width_desktop_min){
@@ -140,20 +155,22 @@
   }
 
   &__text {
-    position: relative;
-    top: 50%;
+    
     display: block;
     width: 90%;
     margin: 0 auto;
     font-family: @lato;
     font-weight: bold;
     font-size: 20px;
-    text-align: center;
     color: @blue-dark;
-    transform: translateY(-50%);
+    
 
     @media screen and (min-width: @width_tablet){
+      position: relative;
+      top: 50%;
       font-size: 14px;
+      text-align: center;
+      transform: translateY(-50%);
     }
 
     @media screen and (min-width: @width_desktop_min){
@@ -169,7 +186,14 @@
       color: @blue-dark;
       transform: translateY(-50%);
     }
+    
+    &:before {
+      content: '- ';
 
+      @media screen and (min-width: @width_tablet){
+        content: normal;
+      }
+    }
   }
 
 }

@@ -11,8 +11,25 @@
 
   &__item {
     .col(30px, left);
-    .col12-4;
+    .col12-12;
     margin-top: 30px;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-6;
+
+      &:nth-child(2n+1) {
+        clear: both;
+      }
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-4;
+
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+
   }
 
 }

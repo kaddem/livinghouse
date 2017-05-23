@@ -2,11 +2,31 @@
 
   &__item{
     position: relative;
-    display: inline-block;
-    margin-left: 60px;
+    display: block;
+    margin-left: 0;
+    text-align: left;
+    padding: 15px;
+    border-top: solid 1px grey;
+
+    @media screen and (min-width: @width_tablet){
+      display: inline-block;
+      margin-left: 60px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
 
     &:first-child {
-      margin-left: 0;
+      border-top: none;
+
+      @media screen and (min-width: @width_tablet){
+        margin-left: 0;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+
+      }
     }
   }
 

@@ -1,7 +1,15 @@
 .usefull-info{
 	display: block;
-  padding-bottom: 70px;
+  padding-bottom: 0;
   padding-top: 60px;
+
+  @media screen and (min-width: @width_tablet){
+    padding-bottom: 70px;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+
+  }
 
   &__inner {
     .container(30px);

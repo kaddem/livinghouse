@@ -1,6 +1,20 @@
 .project-nav{
   .col(30px, right);
-  .col12-6;
+  .col12-12;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid grey;
+
+  @media screen and (min-width: @width_tablet){
+    .col12-6;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+
+  }
 
   &__title {
     display: block;

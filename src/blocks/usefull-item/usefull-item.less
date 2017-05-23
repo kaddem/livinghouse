@@ -1,6 +1,15 @@
 .usefull-item{
   .col(30px, left);
-  .col12-4;
+  .col12-12;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: @width_tablet){
+    .col12-4;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+
+  }
 
   &__content {
     display: block;

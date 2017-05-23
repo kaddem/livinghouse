@@ -1,10 +1,19 @@
 .project-card{
 	display: block;
   width: 100%;
+  padding-bottom: 15px;
   border: 1px solid @border-card;
   border-bottom: 3px solid @green;
   box-shadow: 0 0 14px 5px rgba(0, 0, 0, 0);
   transition: all 0.2s ease;
+
+  @media screen and (min-width: @width_tablet){
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    
+  }
 
   &:hover {
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, .15);
@@ -12,14 +21,23 @@
 
   &__inner {
     position: relative;
-    .row(30px);
+    .row(0);
+
+    @media screen and (min-width: @width_tablet){
+      .row(30px);
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   &__visual {
-    .col(30px, left);
+    .col(0, left);
     // .col12-6;
 
     @media screen and (min-width: @width_tablet){
+      .col(30px, left);
       .col12-7;
     }
 
@@ -61,9 +79,11 @@
   }
 
   &__chart {
+    display: none;
     .row(0);
 
     @media screen and (min-width: @width_tablet){
+      display: block;
       height: 150px;
     }
 
@@ -107,7 +127,7 @@
 
   &__info {
     .col(30px, left);
-    .col12-6;
+    .col12-12;
     padding-top: 30px;
 
     @media screen and (min-width: @width_tablet){
@@ -120,7 +140,16 @@
   }
 
   &__content {
-    padding-right: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @media screen and (min-width: @width_tablet){
+      
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   &__title {
