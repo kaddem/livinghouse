@@ -1,37 +1,102 @@
 .form-block{
   display: block;
-  padding-top: 80px;
-  padding-bottom: 30px;
 
   &__inner {
     .container(30px);
     position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: @width_tablet){
+      
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      padding-top: 80px;
+    }
   }
 
   &__visual {
     position: absolute;
-    right: 15px;
-    top: -60px;
-    width: 600px;
-    height: 600px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     overflow: hidden;
-    box-shadow: -10px 19px 21px 0 rgba(0, 0, 0, 0.1);
+    z-index: -10;
+
+    @media screen and (min-width: @width_tablet){
+      
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      position: absolute;
+      right: 15px;
+      top: -60px;
+      left: auto;
+      width: 600px;
+      height: 600px;
+      overflow: hidden;
+      box-shadow: -10px 19px 21px 0 rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: rgba(255, 255, 255, .85);
+
+      @media screen and (min-width: @width_tablet){
+      
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        content: normal;
+      }
+    }
   }
 
   &__photo {
+    position: absolute;
     display: block;
     height: 100%;
+    margin: 0 auto;
+    z-index: -15;
+    left: 0;
+    right: 0;
+
+    @media screen and (min-width: @width_tablet){
+      
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      content: normal;
+    }
   }
 
   &__border {
-    margin-right: 60px;
     padding-top: 60px;
     padding-bottom: 30px;
     padding-left: 15px;
     padding-right: 15px;
     border: 5px solid @blue;
     box-sizing: border-box;
-    min-height: 600px;
+    
+
+    @media screen and (min-width: @width_tablet){
+      
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      margin-right: 60px;
+      min-height: 600px;
+    }
   }
 
   &__content {
