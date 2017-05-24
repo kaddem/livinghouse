@@ -73,12 +73,18 @@
     background-color: rgba(0, 0, 0, 0.6);
     text-align: center;
     text-decoration: none;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
   }
 
   &__link-text {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    display: inline-block;
+    vertical-align: middle;
     font-family: @lato;
     font-size: 15px;
     line-height: 18px;

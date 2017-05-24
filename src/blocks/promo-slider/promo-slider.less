@@ -75,6 +75,18 @@
     font-size: 24px;
     letter-spacing: .6px;
     color: @blue-dark;
+
+    &--name {
+      display: block;
+      
+      @media screen and (min-width: @width_tablet){
+        display: inline-block;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+
+      }
+    }
   }
 
   &__price {
