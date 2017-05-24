@@ -1,6 +1,6 @@
 mixin pagination()
   +b.pagination&attributes(attributes)
-    +e.arrows
+    +e.arrows.--prev
       +e.A.arrow.--prev(href="#")
     +e.pages
       +e.A.page-link.--active(href="#") 1
@@ -8,5 +8,5 @@ mixin pagination()
       +e.A.page-link(href="#") 3
       +e.A.page-link(href="#") ...
       +e.A.page-link(href="#") 25
-    +e.arrows
+    +e.arrows.--next
       +e.A.arrow.--next(href="#")

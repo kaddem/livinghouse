@@ -1,11 +1,41 @@
 .pagination{
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  margin-top: 65px;
   text-align: center;
+  position: relative;
+
+  @media screen and (min-width: @width_tablet){
+    position: static;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    
+  }
 
   &__arrows {
-    display: inline-block;
-    vertical-align: middle;
+    position: absolute;
+    bottom: 100%;
+
+    @media screen and (min-width: @width_tablet){
+      position: static;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
   }
   
   &__arrow {
@@ -13,13 +43,21 @@
     display: block;
     box-sizing: border-box;
     width: 93px;
-    height: 50px;
+    height: 40px;
     margin-left: 4px;
     margin-right: 4px;
     border-radius: 8px;
     background-color: #ffffff;
     border: solid 1px @blue-dark;
     transition: all .3s ease;
+
+    @media screen and (min-width: @width_tablet){
+      height: 50px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
 
     &:hover {
       background-color: @orange;
@@ -80,19 +118,27 @@
   &__pages {
     display: inline-block;
     vertical-align: middle;
-    height: 50px;
+    
+
+    @media screen and (min-width: @width_tablet){
+      height: 50px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   &__page-link {
     display: inline-block;
     box-sizing: border-box;
-    min-width: 50px;
-    height: 50px;
+    min-width: 40px;
+    height: 40px;
     margin-left: 4px;
     margin-right: 4px;
     font-family: @lato;
     font-size: 24px;
-    line-height: 50px;
+    line-height: 40px;
     letter-spacing: 1.6px;
     text-align: center;
     color: @blue-dark;
@@ -101,6 +147,16 @@
     border: solid 1px @blue-dark;
     text-decoration: none;
     transition: all .3s ease;
+
+    @media screen and (min-width: @width_tablet){
+      min-width: 50px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
 
     &--active {
       background-color: @orange;

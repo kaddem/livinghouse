@@ -16,17 +16,31 @@
 
     @media screen and (min-width: @width_tablet){
       .col12-6;
-
-      &:nth-child(2n+1) {
-        clear: both;
-      }
     }
 
     @media screen and (min-width: @width_desktop_min){
       .col12-4;
+    }
 
-      &:nth-child(3n+1) {
+    &:nth-child(2n+1) {
+
+      @media screen and (min-width: @width_tablet){
         clear: both;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        clear: none;
+      }
+    }
+
+    &:nth-child(3n+1) {
+
+      @media screen and (min-width: @width_tablet){
+        
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        clear: none;
       }
     }
 

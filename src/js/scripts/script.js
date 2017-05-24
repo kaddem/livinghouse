@@ -84,6 +84,17 @@ $(window).load(function () {
   ratioPhoto('.review-card__visual');
   ratioPhoto('.project__photo');
 
+  $(window).resize(function(){
+    ratioPhoto('.review__slider-preview-item');
+    ratioPhoto('.review__slider-big-item');
+    ratioLetter('.review__letter-box');
+    ratioLetter('.review__chart-box');
+    ratioPhoto('.gallery__item');
+    ratioPhoto('.project-card__photo');
+    ratioPhoto('.review-card__visual');
+    ratioPhoto('.project__photo');
+  });
+
   function tabs(boxTabsLink, boxTabsContent, tabs){ 
     $(boxTabsLink + ' input').on('click', function(e){
       var attrLink = $(this).attr('id');

@@ -12,7 +12,7 @@
 
     @media screen and (min-width: @width_desktop_min){
       padding-left: 105px;
-      adding-right: 105px;
+      padding-right: 105px;
     }
   }
 
@@ -36,6 +36,7 @@
   &__item {
     .col(30px, left);
     .col12-12;
+    padding-bottom: 20px;
 
     @media screen and (min-width: @width_tablet){
       .col12-6;
@@ -46,7 +47,15 @@
     }
 
     &:last-child {
-      padding-top: 22px;
+      padding-bottom: 0;
+
+      @media screen and (min-width: @width_tablet){
+        padding-top: 22px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        
+      }
     }
   }
 
