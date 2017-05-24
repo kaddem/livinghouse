@@ -161,7 +161,7 @@
 
   &__how-drive {
     .col(30px, left);
-    .col12-6;
+    .col12-12;
 
     @media screen and (min-width: @width_tablet) {
       .col12-6;
@@ -277,11 +277,30 @@
 
   &__field {
     .col(30px, left);
-    .col12-4;
+    .col12-12;
+    margin-top: 15px;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-4;
+      margin-top: 0;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-4;
+    }
 
     &--textarea {
       .col12-12;
       margin-top: 30px;
+
+      @media screen and (min-width: @width_tablet){
+        .col12-12;
+        margin-top: 30px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        .col12-4;
+      }
     }
   }
 
