@@ -32,13 +32,21 @@
 
   &__number {
     margin-left: 20px;
-    display: inline-block;
+    display: block;
     font-family: @lato;
     font-weight: bold;
     font-size: 15px;
     line-height: 16px;
     color: @blue-dark;
     text-decoration: none;
+
+    @media screen and (min-width: @width_tablet){
+      display: inline-block;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
 
     &:first-child {
       margin-left: 0;

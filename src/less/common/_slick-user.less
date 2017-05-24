@@ -1,5 +1,6 @@
 .slick-dots {
   position: absolute;
+  width: 100%;
   left: 0;
   right: 0;
   bottom: 10px;
@@ -32,12 +33,23 @@
   }
 }
 
+.promo .slick-arrow {
+  display: none !important;
+
+  @media screen and (min-width: @width_tablet){
+    display: block !important;
+  }
+
+
+  @media screen and (min-width: @width_desktop_min){
+
+  }
+}
+
 .slick-arrow {
-  // display: none !important;
   display: block;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  bottom: 4px;
   margin: auto;
   width: 30px;
   height: 30px;
@@ -79,7 +91,7 @@
 }
 
 .slick-prev {
-  // left: 30px;
+  left: 5px;
 
   @media screen and (min-width: @width_tablet){
     left: 5px;
@@ -97,7 +109,7 @@
 }
 
 .slick-next {
-  
+  right: 5px;
 
   @media screen and (min-width: @width_tablet){
     right: 5px;
