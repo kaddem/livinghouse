@@ -24,7 +24,26 @@ $(document).ready(function(){
     asNavFor: '.review__slider-big',
     dots: false,
     centerMode: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+      // },
+      // {
+      //   breakpoint: 768,
+      //   settings: {
+      //     slidesToShow: 0,
+      //     settings: "unslick"
+      //   }
+      // }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
 
 });

@@ -24,19 +24,44 @@
 
   &__visual {
     .col(30px, left);
-    .col12-8;
+    .col12-12;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-6;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-8;
+    }
   }
 
   &__info {
     .col(30px, left);
-    .col12-4;
+    .col12-12;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-6;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-4;
+    }
   }
 
   &__photo {
     width: 100%;
-    height: 515px;
-    margin-bottom: 30px;
+    height: 220px;
+    
     overflow: hidden;
+
+    @media screen and (min-width: @width_tablet){
+      height: 220px;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      height: 515px;
+    }
   }
 
   &__img {
@@ -45,12 +70,20 @@
   }
 
   &__price {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 65px;
+    padding: 15px;
     text-align: right;
     border: solid 1px #e6e6e6;
     border-bottom: 3px solid @green;
+
+    @media screen and (min-width: @width_tablet){
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 65px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   &__currency {
@@ -183,9 +216,17 @@
     padding-top: 5px;
     padding-right: 10px;
     font-family: @lato;
-    font-size: 38px;
+    font-size: 24px;
     font-weight: bold;
     color: @blue;
+
+    @media screen and (min-width: @width_tablet){
+      font-size: 38px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
 
     &:after {
       position: absolute;
@@ -208,15 +249,33 @@
 
   &__chart-item {
     .col(30px, left);
-    .col12-6;
+    .col12-12;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-12;
+
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-6;
+    }
   }
 
   &__chart-content {
-    height: 370px;
-    padding: 20px;
+    
+    padding: 20px 60px;
     box-sizing: border-box;
     border: solid 1px #e6e6e6;
     text-align: center;
+
+    @media screen and (min-width: @width_tablet){
+
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      padding: 20px;
+      height: 370px;
+    }
   }
 
   &__chart-title {
@@ -229,7 +288,15 @@
   }
 
   &__chart-box {
-    height: 300px;
+    
+
+    @media screen and (min-width: @width_tablet){
+
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      height: 300px;
+    }
   }
 
   &__chart-img {

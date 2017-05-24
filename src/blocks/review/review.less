@@ -17,9 +17,9 @@
 
   &__title {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
     font-family: @lato;
     font-weight: bold;
     font-size: 24px;
@@ -27,6 +27,15 @@
     letter-spacing: 1.5px;
     color: @blue;
     text-transform: uppercase;
+
+    @media screen and (min-width: @width_tablet){
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__row {
@@ -35,7 +44,15 @@
 
   &__slider-box {
     .col(30px, left);
-    .col12-8;
+    .col12-12;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-7;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-8;
+    }
   }
 
   &__slider-content {
@@ -43,12 +60,28 @@
   }
 
   &__slider-big {
-    height: 515px;
+    height: 200px;
     margin-bottom: 30px;
+
+    @media screen and (min-width: @width_tablet){
+      height: 400px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      height: 515px;
+    }
   }
 
   &__slider-big-item {
-    height: 100%;
+    height: 200px;
+
+    @media screen and (min-width: @width_tablet){
+      height: 400px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      height: 515px;
+    }
   }
 
   &__big-photo {
@@ -56,13 +89,34 @@
   }
 
   &__slider-big-item {
-    height: 515px;
+    
   }
 
 
 
   &__slider-preview {
     .row(30px);
+    // display: none;
+
+    @media screen and (min-width: @width_tablet){
+      display: block;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
+
+    & .slick-list {
+      display: none;
+
+      @media screen and (min-width: @width_tablet){
+        display: block;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+
+      }
+    }
   }
 
   &__slider-preview-item {
@@ -75,14 +129,30 @@
 
   &__info-box {
     .col(30px, left);
-    .col12-4;
+    .col12-12;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-5;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      .col12-4;
+    }
   }
 
   & .slick-arrow {
-    top: -290px;
+    top: -140px;
     bottom: auto;
     background-color: rgba(255, 255, 255, 0.5);
     border: solid 2px #e6e6e6;
+
+    @media screen and (min-width: @width_tablet){
+      top: -200px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      top: -290px;
+    }
 
     &:hover {
       background-color: rgba(255, 255, 255, 0);
@@ -111,17 +181,26 @@
   }
 
   &__letter-box {
-    height: 515px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-    overflow: hidden;
-    border: solid 1px #e6e6e6;
+    display: none;
+
+    @media screen and (min-width: @width_tablet){
+      display: block;
+      height: 400px;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+      overflow: hidden;
+      border: solid 1px #e6e6e6;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      height: 515px;
+    }
   }
 
   &__letter {
     display: block;
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
   }
 
   &__chart {

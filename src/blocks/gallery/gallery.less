@@ -21,16 +21,47 @@
 
   &__box {
     .row(0);
-    height: 240px;
+    height: 140px;
+
+    @media screen and (min-width: @width_tablet){
+      height: 200px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      height: 240px;
+    }
   }
 
   &__item {
+    display: none;
     position: relative;
     .col(0, left);
-    .col5-1;
+    .col12-6;
     height: 100%;
     overflow: hidden;
-  }
+
+    @media screen and (min-width: @width_tablet){
+      .col12-4;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      display: block;
+      .col5-1;
+    }
+    
+    &:nth-child(1), &:nth-child(5) {
+      display: block;
+    }
+
+    &:nth-child(3) {
+
+      @media screen and (min-width: @width_tablet){
+        display: block;
+      }
+
+    }
+
+}
 
   &__link {
     position: absolute;
