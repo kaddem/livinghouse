@@ -61,10 +61,10 @@
 
   &__slider-big {
     height: 200px;
-    margin-bottom: 30px;
 
     @media screen and (min-width: @width_tablet){
       height: 400px;
+      margin-bottom: 30px;
     }
 
     @media screen and (min-width: @width_desktop_min){
@@ -141,7 +141,7 @@
   }
 
   & .slick-arrow {
-    top: -140px;
+    top: -115px;
     bottom: auto;
     background-color: rgba(255, 255, 255, 0.5);
     border: solid 2px #e6e6e6;
@@ -205,14 +205,32 @@
 
   &__chart {
     .col(30px, left);
-    .col12-6;
+    .col12-12;
+
+    @media screen and (min-width: @width_tablet){
+      .col12-6;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__chart-box {
-    height: 120px;
+    height: 300px;
+    padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
     border: solid 1px #e6e6e6;
+
+    @media screen and (min-width: @width_tablet){
+      height: 120px;
+      padding: 0;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__chart-img {

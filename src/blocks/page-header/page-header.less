@@ -58,16 +58,32 @@
   &__logo {
     .col(30px, left);
     .col12-3;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+
+    @media screen and (min-width: @width_tablet){
+      float: left;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   &__info {
     .col(30px, left);
     .col12-8;
-    padding-top: 7px;
+    padding-left: 0;
+    padding-right: 40px;
     text-align: right;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
 
     @media screen and (min-width: @width_tablet){
       .col12-7;
+      float: left;
       padding-top: 12px;
     }
 

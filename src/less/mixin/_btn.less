@@ -82,8 +82,16 @@
   }
 
   &--project {
-    width: 240px;
+    width: 100%;
     display: inline-block;
+
+    @media screen and (min-width: @width_tablet){
+      width: 240px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
 }
