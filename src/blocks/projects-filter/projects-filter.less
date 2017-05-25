@@ -25,31 +25,102 @@
   &__item {
     .col(30px, left);
     box-sizing: content-box;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+
+    @media screen and (min-width: @width_tablet){
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
 
     &--type {
-      width: 270px;
+      width: 100%;
+      box-sizing: border-box;
+
+      @media screen and (min-width: @width_tablet){
+        width: 40%;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        width: 25%;
+      }
     }
 
     &--bedroom {
-      width: 90px;
+      width: 50%;
+
+      @media screen and (min-width: @width_tablet){
+        width: 20%;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        width: 10%;
+      }
     }
 
     &--square {
-      width: 140px;
+      width: 50%;
+
+      @media screen and (min-width: @width_tablet){
+        width: 20%;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        width: 15%;
+      }
     }
 
     &--proportions {
-      width: 140px;
+      width: 50%;
+
+      @media screen and (min-width: @width_tablet){
+        width: 20%;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        width: 15%;
+      }
     }
 
     &--price {
-      width: 290px;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
       .clearfix();
+
+      @media screen and (min-width: @width_tablet){
+        width: 40%;
+        margin-top: 15px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        margin-top: 0;
+        width: 25%;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     &--btn {
-      width: 90px;
-      padding-top: 23px;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 50% ;
+      padding-top: 15px;
+
+      @media screen and (min-width: @width_tablet){
+        width: 20%;
+        margin-top: 23px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        width: 10%;
+        padding-top: 0;
+      }
     }
   }
 
@@ -65,6 +136,7 @@
   }
 
   &__select, &__cost {
+    position: relative;
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -92,6 +164,21 @@
     /* for IE */
     -ms-appearance: none;
     appearance: none!important;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 44%;
+      right: 15px;
+      margin: auto;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-left: 1px solid @orange;
+      border-bottom: 1px solid @orange;
+      transform: rotate(-45deg);
+    }
 
     & option {
       display: block;
@@ -99,9 +186,86 @@
     }
   }
 
+  &__dropdown {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    padding-top: 10px;
+    margin-top: 0;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    transition: all .4s ease;
+    z-index: 100;
+  }
+
+  &__option-list {
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    white-space: nowrap;
+    list-style: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 30px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      transform: rotate(-45deg);
+      z-index: -1;
+      box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__option {
+    display: block;
+    font-family: Lato, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    color: #3b3a39;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 30px;
+    color: #3b3a39;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #4f5b99;
+      color: #fff;
+    }
+  }
+
   &__price {
-    width: 130px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 50%;
     float: right;
+    box-sizing: border-box;
+
+    @media screen and (min-width: @width_tablet){
+      width: 50%;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      width: 50%;
+    }
 
     &:first-child {
       float: left;

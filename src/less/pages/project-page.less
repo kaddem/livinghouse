@@ -31,11 +31,15 @@
       & .project-form__title{
         position: relative;
         vertical-align: middle;
-        padding-right: 30px;
+        padding-right: 40px;
         cursor: pointer;
 
         &:after {
           content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto;
           display: inline-block;
           vertical-align: middle;
           margin-left: 15px;
@@ -233,12 +237,14 @@
   &__title {
     position: relative;
     z-index: 10;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 -2px;
     font-family: @lato;
-    font-size: 24px;
-    line-height: 60px;
+    font-size: 18px;
+    line-height: 24px;
     font-weight: bold;
     letter-spacing: 0.8px;
     text-transform: uppercase;
@@ -246,7 +252,10 @@
     background-color: @yellow-light;
 
     @media screen and (min-width: @width_tablet){
-
+      font-size: 24px;
+      line-height: 60px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     @media screen and (min-width: @width_desktop_min){
@@ -286,6 +295,7 @@
     padding-left: 0;
     margin: 0;
     list-style: none;
+    font-size: 0;
   }
   
   &__tabs-burger {
@@ -299,6 +309,7 @@
       background-color: transparent;
     }
   }
+
 
   &__tabs-item, &__tabs-label {
     padding-left: 15px;
@@ -328,6 +339,39 @@
     // &--active {
     //   background-color: transparent;
     // }
+  }
+
+  &__tabs-label {
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    height: 50px;
+    vertical-align: middle;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+
+    & span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @media screen and (min-width: @width_tablet){
+      width: auto;
+      font-size: 13px;
+      line-height: 50px;
+      margin-right: 2px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__table-select {
@@ -373,7 +417,48 @@
       }
 
       @media screen and (min-width: @width_desktop_min){
-        .col12-8;
+        .col12-6;
+      }
+    }
+
+    &--quantity {
+      .col12-4;
+
+      @media screen and (min-width: @width_tablet){
+        .col12-2;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        .col12-2;
+      }
+    }
+
+    &--price {
+      .col12-4;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+
+      @media screen and (min-width: @width_tablet){
+        .col12-2;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        .col12-2;
+      }
+    }
+
+    &--action {
+      .col12-4;
+
+      @media screen and (min-width: @width_tablet){
+        .col12-2;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        .col12-2;
       }
     }
 

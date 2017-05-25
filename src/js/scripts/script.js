@@ -146,7 +146,7 @@ $(window).load(function () {
   });
 
   $('.nav ul a').on('click', function(e){
-      if ($(window).width() < 1200) {
+      if ($(window).width() < 768) {
           $('.main-nav').slideUp(400);
           $('.burger').addClass('burger--open');
           $('.burger').removeClass('burger--close');
@@ -155,7 +155,7 @@ $(window).load(function () {
 
 
   $(window).resize(function(){
-      if( $(window).width() > 1199 ) {
+      if( $(window).width() > 767 ) {
           $('.main-nav').show();
       } else {
           $('.main-nav').slideUp(400);
@@ -166,7 +166,7 @@ $(window).load(function () {
   });
 
   $(window).on('scroll', function(e) { // отслеживаем событие на элементе window
-    if( $(window).width() < 1200 ) {
+    if( $(window).width() < 768 ) {
         $('.main-nav').slideUp(400);
         $('.main-nav').removeClass('main-nav--open');
         $('.page-header').removeClass('page-header--open');
@@ -174,7 +174,7 @@ $(window).load(function () {
     }
   });
 
-  if ( $(window).scrollTop() > 100 && $(window).width() > 1199) {
+  if ( $(window).scrollTop() > 100 && $(window).width() > 767) {
     $('.page-header').addClass('page-header--scroll');
     $('.page-header').addClass('page-header--desktop');
   } else if ( $(window).scrollTop() > 100 ) {
@@ -203,8 +203,21 @@ $(window).load(function () {
   telMask('.contact-form__input--tel');
   telMask('.consult__input-tel');
 
+  $('.projects-filter__select').on('click', function(){
+    var dropdown = $(this).find('.projects-filter__dropdown');
+    dropdown.toggle();
+  })
 
+  $('.form-review__select').on('click', function(){
+    var dropdown = $(this).find('.form-review__dropdown');
+    dropdown.toggle();
+  })
+
+  $('.form__select').on('click', function(){
+    var dropdown = $(this).find('.form__dropdown');
+    dropdown.toggle();
+  })
   // кастомизация выпадающего списка - select
-  $('select').selecter();
+  // $('select').selecter();
 
 });

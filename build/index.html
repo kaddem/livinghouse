@@ -52,36 +52,38 @@
                 <a class="phone__number" href="tel:+78129550507">+7 (812) 955-05-07</a>
               </div>
               <nav class="main-nav">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="/projects.html">Каталог проектов</a>
-                    <div class="subnav">
-                      <ul class="subnav__list">
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Дачные дома</a>
-                        </li>
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Для постоянного проживания</a>
-                        </li>
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Бани</a>
-                        </li>
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Срубы и домокомплекты</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Пиломатериалы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="/reviews.html">Отзывы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="/contacts.html">Контакты</a>
-                  </li>
-                </ul>
+                <div class="main-nav__inner">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item main-nav__item--dropdown">
+                      <a class="main-nav__link" href="/projects.html">Каталог проектов</a>
+                      <div class="subnav">
+                        <ul class="subnav__list">
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Дачные дома</a>
+                          </li>
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Для постоянного проживания</a>
+                          </li>
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Бани</a>
+                          </li>
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Срубы и домокомплекты</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Пиломатериалы</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="/reviews.html">Отзывы</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="/contacts.html">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
               </nav>
             </div>
           </div>
@@ -556,25 +558,59 @@
               <form class="form">
                 <div class="form__item form__item--type">
                   <p class="form__label">Тип проекта</p>
-                  <select class="form__select" placeholder="">
-                    <option>Постоянное проживание</option>
-                    <option>Летнее проживание</option>
-                    <option>Осенне-весеннее проживание</option>
-                    <option>Временная регистрация</option>
-                    <option>Вид на жительство</option>
-                    <option>Green-card</option>
-                  </select>
+                  <div class="form__select">
+                    <span class="form__selected">Выбрать</span>
+                    <div class="form__dropdown">
+                      <ul class="form__option-list">
+                        <li class="form__option form__option--selected">
+                          <a class="form__link" href="#">Постоянное проживание</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">Летнее проживание</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">Осенне-весеннее проживание</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">Временная регистрация</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">Вид на жительство</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">Green-card</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="form__item form__item--proportions">
                   <p class="form__label">Площадь дома, м.кв</p>
-                  <select class="form__select" placeholder="">
-                    <option>100-120</option>
-                    <option>120-140</option>
-                    <option>140-160</option>
-                    <option>160-180</option>
-                    <option>180-200</option>
-                    <option>от 200</option>
-                  </select>
+                  <div class="form__select">
+                    <span class="form__selected">Выбрать</span>
+                    <div class="form__dropdown">
+                      <ul class="form__option-list">
+                        <li class="form__option form__option--selected">
+                          <a class="form__link" href="#">100-120</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">120-140</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">140-160</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">160-180</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">180-200</a>
+                        </li>
+                        <li class="form__option">
+                          <a class="form__link" href="#">от 200</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="form__item form__item--price">
                   <p class="form__label">Стоимость, руб.</p>
@@ -597,7 +633,7 @@
           </p>
           <p class="consult__text">Или отправьте заявку, мы вам перезвоним:</p>
           <form class="consult__form">
-            <input class="consult__input-tel" placeholder="+7 (___) ___-__-__" type="text" />
+            <input class="consult__input-tel" type="tel" placeholder="+7 (___) ___-__-__" />
             <button class="btn btn--green-fill btn--consult">Перезвоните мне</button>
           </form>
         </div>

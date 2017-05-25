@@ -9,14 +9,16 @@
   padding-bottom: 10px;
   background-color: rgba(255, 255, 255, 1);
   border-bottom: solid 1px #f1f0ee; 
-  transition: all .3s ease; 
+  transition: all .3s ease;
 
   @media screen and (min-width: @width_tablet){
     // width: @container_tablet;
+    border-bottom: none;
   }
 
   @media screen and (min-width: @width_desktop_min){
     // width: @container_desktop_min;
+    // border-bottom: solid 1px #f1f0ee;
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -29,6 +31,17 @@
     z-index: 1000;
     border-bottom: none;
     border-bottom: solid 1px transparent;
+
+    &.page-header--scroll {
+
+      @media screen and (min-width: @width_tablet){
+        border-bottom: none;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        border-bottom: solid 1px #f1f0ee;
+      }
+    }
   }
 
   &--scroll {
@@ -40,6 +53,10 @@
     border-bottom: none;
     background-color: #fff;
     border-bottom: solid 1px #f1f0ee;
+
+    @media screen and (min-width: @width_tablet){
+      border-bottom: solid 1px #f1f0ee;
+    }
   }
 
   &--open {
@@ -48,7 +65,15 @@
   
   &__inner {
     position: relative;
-    .container(30px)
+    .container(30px);
+
+    @media screen and (min-width: @width_tablet){
+      position: static;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      position: relative;
+    }
   }
 
   &__row {
@@ -82,7 +107,8 @@
     vertical-align: middle;
 
     @media screen and (min-width: @width_tablet){
-      .col12-7;
+      .col(30px, left);
+      .col12-9;
       float: left;
       padding-top: 12px;
     }

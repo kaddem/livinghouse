@@ -134,13 +134,17 @@ block content
               +e.tabs(id="tabs-roof")
                 +e.tabs-list
                   +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-1" checked)
-                  +e.LABEL.tabs-label.--active(for="type-1") Ондулин
+                  +e.LABEL.tabs-label.--active(for="type-1") 
+                    span Ондулин
                   +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-2")
-                  +e.LABEL.tabs-label(for="type-2") Металлочерепица
+                  +e.LABEL.tabs-label(for="type-2") 
+                    span Металлочерепица
                   +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-3")
-                  +e.LABEL.tabs-label(for="type-3") Мягкая кровля
+                  +e.LABEL.tabs-label(for="type-3") 
+                    span Мягкая кровля
                   +e.INPUT.tabs-radio(type="radio" name="type-roof" id="type-4")
-                  +e.LABEL.tabs-label(for="type-4") Натуральная черепица
+                  +e.LABEL.tabs-label(for="type-4") 
+                    span Натуральная черепица
                 +e.SPAN.tabs-burger Изменить
               +e.tabs-content(id="tabs-roof-content")
                 +e.table-select.--roof-content(class="type-1")
@@ -247,27 +251,27 @@ block content
 
           +e.section.--center
             +e.head
-              +e.H3.title Добавить фундамент
+              +e.H3.title.--accordeon Добавить фундамент
             +e.table
               +e.table-select
                 +e.table-row
                   +e.table-col.--description
                     +e.P.description Винтовые сваи, шт.
-                  +e.table-col.quantity
-                  +e.table-col.price
-                  +e.table-col.action
+                  +e.table-col.--quantity 10
+                  +e.table-col.--price 50 000
+                  +e.table-col.--action
                 +e.table-row
                   +e.table-col.--description
                     +e.P.description Лента
-                  +e.table-col.quantity
-                  +e.table-col.price
-                  +e.table-col.action
+                  +e.table-col.--quantity 4
+                  +e.table-col.--price 150 000
+                  +e.table-col.--action
                 +e.table-row
                   +e.table-col.--description
                     +e.P.description Плита
-                  +e.table-col.quantity
-                  +e.table-col.price
-                  +e.table-col.action
+                  +e.table-col.--quantity 35
+                  +e.table-col.--price 20 000
+                  +e.table-col.--action
 
           +e.section.--btn
             +b.BUTTON.btn.--orange.--orange-fill.--pr-form Сохранить

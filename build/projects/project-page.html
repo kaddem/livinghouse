@@ -52,36 +52,38 @@
                 <a class="phone__number" href="tel:+78129550507">+7 (812) 955-05-07</a>
               </div>
               <nav class="main-nav">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="/projects.html">Каталог проектов</a>
-                    <div class="subnav">
-                      <ul class="subnav__list">
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Дачные дома</a>
-                        </li>
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Для постоянного проживания</a>
-                        </li>
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Бани</a>
-                        </li>
-                        <li class="subnav__item">
-                          <a class="subnav__link" href="#">Срубы и домокомплекты</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="#">Пиломатериалы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="/reviews.html">Отзывы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a class="main-nav__link" href="/contacts.html">Контакты</a>
-                  </li>
-                </ul>
+                <div class="main-nav__inner">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="/projects.html">Каталог проектов</a>
+                      <div class="subnav">
+                        <ul class="subnav__list">
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Дачные дома</a>
+                          </li>
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Для постоянного проживания</a>
+                          </li>
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Бани</a>
+                          </li>
+                          <li class="subnav__item">
+                            <a class="subnav__link" href="#">Срубы и домокомплекты</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="#">Пиломатериалы</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="/reviews.html">Отзывы</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a class="main-nav__link" href="/contacts.html">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
               </nav>
             </div>
           </div>
@@ -339,13 +341,21 @@
                 <div class="project-form__tabs" id="tabs-roof">
                   <div class="project-form__tabs-list">
                     <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-1" checked="checked" />
-                    <label class="project-form__tabs-label project-form__tabs-label--active" for="type-1">Ондулин</label>
+                    <label class="project-form__tabs-label project-form__tabs-label--active" for="type-1">
+                      <span>Ондулин</span>
+                    </label>
                     <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-2" />
-                    <label class="project-form__tabs-label" for="type-2">Металлочерепица</label>
+                    <label class="project-form__tabs-label" for="type-2">
+                      <span>Металлочерепица</span>
+                    </label>
                     <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-3" />
-                    <label class="project-form__tabs-label" for="type-3">Мягкая кровля</label>
+                    <label class="project-form__tabs-label" for="type-3">
+                      <span>Мягкая кровля</span>
+                    </label>
                     <input class="project-form__tabs-radio" type="radio" name="type-roof" id="type-4" />
-                    <label class="project-form__tabs-label" for="type-4">Натуральная черепица</label>
+                    <label class="project-form__tabs-label" for="type-4">
+                      <span>Натуральная черепица</span>
+                    </label>
                   </div>
                   <span class="project-form__tabs-burger">Изменить</span>
                 </div>
@@ -509,7 +519,7 @@
             </div>
             <div class="project-form__section project-form__section--center">
               <div class="project-form__head">
-                <h3 class="project-form__title">Добавить фундамент</h3>
+                <h3 class="project-form__title project-form__title--accordeon">Добавить фундамент</h3>
               </div>
               <div class="project-form__table">
                 <div class="project-form__table-select">
@@ -517,25 +527,25 @@
                     <div class="project-form__table-col project-form__table-col--description">
                       <p class="project-form__description">Винтовые сваи, шт.</p>
                     </div>
-                    <div class="project-form__table-col quantity"></div>
-                    <div class="project-form__table-col price"></div>
-                    <div class="project-form__table-col action"></div>
+                    <div class="project-form__table-col project-form__table-col--quantity">10</div>
+                    <div class="project-form__table-col project-form__table-col--price">50 000</div>
+                    <div class="project-form__table-col project-form__table-col--action"></div>
                   </div>
                   <div class="project-form__table-row">
                     <div class="project-form__table-col project-form__table-col--description">
                       <p class="project-form__description">Лента</p>
                     </div>
-                    <div class="project-form__table-col quantity"></div>
-                    <div class="project-form__table-col price"></div>
-                    <div class="project-form__table-col action"></div>
+                    <div class="project-form__table-col project-form__table-col--quantity">4</div>
+                    <div class="project-form__table-col project-form__table-col--price">150 000</div>
+                    <div class="project-form__table-col project-form__table-col--action"></div>
                   </div>
                   <div class="project-form__table-row">
                     <div class="project-form__table-col project-form__table-col--description">
                       <p class="project-form__description">Плита</p>
                     </div>
-                    <div class="project-form__table-col quantity"></div>
-                    <div class="project-form__table-col price"></div>
-                    <div class="project-form__table-col action"></div>
+                    <div class="project-form__table-col project-form__table-col--quantity">35</div>
+                    <div class="project-form__table-col project-form__table-col--price">20 000</div>
+                    <div class="project-form__table-col project-form__table-col--action"></div>
                   </div>
                 </div>
               </div>

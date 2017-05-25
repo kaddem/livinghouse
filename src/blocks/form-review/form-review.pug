@@ -5,22 +5,41 @@ mixin form-review()
         +e.row
           +e.item
             +e.LABEL.label Тип проекта
-            +e.SELECT.select(placeholder="")
-              +e.OPTION Постоянное проживание
-              +e.OPTION Летнее проживание
-              +e.OPTION Осенне-весеннее проживание
-              +e.OPTION Временная регистрация
-              +e.OPTION Вид на жительство
-              +e.OPTION Green-card
+            +e.DIV.select
+              +e.SPAN.selected Выбрать
+              +e.dropdown
+                +e.UL.option-list
+                  +e.LI.option.--selected 
+                      +e.A.link(href="#") Постоянное проживание
+                  +e.LI.option 
+                    +e.A.link(href="#") Летнее проживание
+                  +e.LI.option 
+                    +e.A.link(href="#") Осенне-весеннее проживание
+                  +e.LI.option 
+                    +e.A.link(href="#") Временная регистрация
+                  +e.LI.option 
+                    +e.A.link(href="#") Вид на жительство
+                  +e.LI.option 
+                    +e.A.link(href="#") Green-card
           +e.item
             +e.LABEL.label Город
-            +e.SELECT.select(placeholder="")
-              +e.OPTION Санкт-Петербург
-              +e.OPTION Тосно
-              +e.OPTION Сестрорецк
-              +e.OPTION 47 км
-              +e.OPTION Грузино
-              +e.OPTION Нюнимяки
+            +e.DIV.select
+              +e.SPAN.selected Выбрать
+              +e.dropdown
+                +e.UL.option-list
+                  +e.LI.option.--selected
+                    +e.A.link(href="#") Санкт-Петербург
+                  +e.LI.option
+                    +e.A.link(href="#") Тосно
+                  +e.LI.option
+                    +e.A.link(href="#") Сестрорецк
+                  +e.LI.option.--selected
+                    +e.A.link(href="#") 47 км
+                  +e.LI.option
+                    +e.A.link(href="#") Грузино
+                  +e.LI.option
+                    +e.A.link(href="#") Нюнимяки
+
           +e.item
             +b.BUTTON.btn.--orange.--orange-fill Показать проекты
             +e.box-checkbox

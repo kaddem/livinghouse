@@ -4,37 +4,69 @@ mixin projects-filter()
       +e.H1.title Подобрать проект по параметрам:
       +e.box
         +e.item.--type
-          +e.LABEL.label Тип проекта
-          +e.SELECT.select
-            +e.OPTION Постоянное проживание
-            +e.OPTION Летнее проживание
-            +e.OPTION Осенне-весеннее проживание
-            +e.OPTION Временная регистрация
-            +e.OPTION Вид на жительство
-            +e.OPTION Green-card
+          +e.P.label Тип проекта
+          +e.DIV.select
+            +e.SPAN.selected Выбрать
+            +e.dropdown
+              +e.UL.option-list
+                +e.LI.option.--selected 
+                  +e.A.link(href="#") Постоянное проживание
+                +e.LI.option 
+                  +e.A.link(href="#") Летнее проживание
+                +e.LI.option 
+                  +e.A.link(href="#") Осенне-весеннее проживание
+                +e.LI.option 
+                  +e.A.link(href="#") Временная регистрация
+                +e.LI.option 
+                  +e.A.link(href="#") Вид на жительство
+                +e.LI.option 
+                  +e.A.link(href="#") Green-card
         +e.item.--bedroom
-          +e.LABEL.label Спален
-          +e.SELECT.select
-            +e.OPTION 1
-            +e.OPTION 2
-            +e.OPTION 3
+          +e.P.label Спален
+          +e.DIV.select
+            +e.SPAN.selected Шт.
+            +e.dropdown
+              +e.UL.option-list
+                +e.LI.option.--selected
+                  +e.A.link(href="#") 1
+                +e.LI.option
+                  +e.A.link(href="#") 2
+                +e.LI.option
+                  +e.A.link(href="#") 3
         +e.item.--square
-          +e.LABEL.label Площадь
-          +e.SELECT.select
-            +e.OPTION 100 - 120
-            +e.OPTION 120 - 140
-            +e.OPTION 140 - 160
-            +e.OPTION 160 - 180
-            +e.OPTION 180 - 200
-            +e.OPTION от 200
+          +e.P.label Площадь
+          +e.DIV.select
+            +e.SPAN.selected Выбрать
+            +e.dropdown
+              +e.UL.option-list
+                +e.LI.option.--selected
+                  +e.A.link(href="#") 100 - 120
+                +e.LI.option
+                  +e.A.link(href="#") 120 - 140
+                +e.LI.option
+                  +e.A.link(href="#") 140 - 160
+                +e.LI.option
+                  +e.A.link(href="#") 160 - 180
+                +e.LI.option
+                  +e.A.link(href="#") 180 - 200
+                +e.LI.option
+                  +e.A.link(href="#") от 200
         +e.item.--proportions
-          +e.LABEL.label Площадь
-          +e.SELECT.select
-            +e.OPTION 6 Х 6
-            +e.OPTION 7 Х 7
-            +e.OPTION 8 Х 8
-            +e.OPTION 8 Х 6
-            +e.OPTION 9 Х 7
+          +e.P.label Площадь
+          +e.DIV.select
+            +e.SPAN.selected Выбрать
+            +e.dropdown
+              +e.UL.option-list
+                +e.LI.option.--selected
+                  +e.A.link(href="#") 6 Х 6
+                +e.LI.option
+                  +e.A.link(href="#") 7 Х 7
+                +e.LI.option
+                  +e.A.link(href="#") 8 Х 8
+                +e.LI.option
+                  +e.A.link(href="#") 8 Х 6
+                +e.LI.option
+                  +e.A.link(href="#") 9 Х 7
         +e.item.--price
           +e.price
             +e.LABEL.label Стоимость от
