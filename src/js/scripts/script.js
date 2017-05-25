@@ -203,4 +203,8 @@ $(window).load(function () {
   telMask('.contact-form__input--tel');
   telMask('.consult__input-tel');
 
+
+  // кастомизация выпадающего списка - select
+  $('select').selecter();
+
 });
