@@ -38,8 +38,10 @@ mixin form()
               +e.A.link(href="#") от 200
     +e.item.--price
       +e.P.label Стоимость, руб.
-      +e.INPUT.cost.--start(placeholder="")
-      +e.INPUT.cost.--end(placeholder="")
+      +e.INPUT.cost.--start(data-price-start="90000" id="amount_start" placeholder="")
+      +e.INPUT.cost.--end(data-price-end="420000" id="amount_end" placeholder="")
+      +e.DIV.slider-box
+        +b.slider-ui(id="form-slider-ui")
     
     +e.item.--btn
       block

@@ -33,6 +33,7 @@
     <link rel="shortlink" href="#">
     <link type="text/plain" rel="author" href="humans.txt">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
@@ -98,7 +99,7 @@
         <div class="promo-slider" id="promo-slider">
           <div class="promo-slider__item" style="background-image: url(/img/promo-slide.jpg);">
             <div class="promo-slider__inner">
-              <h1 class="promo-slider__title">Профилированный брус</h1>
+              <p class="promo-slider__title">Профилированный брус</p>
               <div class="promo-slider__info">
                 <span class="promo-slider__text promo-slider__text--name">финский профиль</span>
                 <span class="promo-slider__price">7900</span>
@@ -109,7 +110,7 @@
           </div>
           <div class="promo-slider__item" style="background-image: url(/img/promo-slide.jpg);">
             <div class="promo-slider__inner">
-              <h1 class="promo-slider__title">Просто брус</h1>
+              <p class="promo-slider__title">Просто брус</p>
               <div class="promo-slider__info">
                 <span class="promo-slider__text promo-slider__text--name">Норвежский профиль</span>
                 <span class="promo-slider__price">5900</span>
@@ -120,7 +121,7 @@
           </div>
           <div class="promo-slider__item" style="background-image: url(/img/promo-slide.jpg);">
             <div class="promo-slider__inner">
-              <h1 class="promo-slider__title">Бревенчатый дом</h1>
+              <p class="promo-slider__title">Бревенчатый дом</p>
               <div class="promo-slider__info">
                 <span class="promo-slider__text promo-slider__text--name">Русская березка</span>
                 <span class="promo-slider__price">4900</span>
@@ -614,8 +615,11 @@
                 </div>
                 <div class="form__item form__item--price">
                   <p class="form__label">Стоимость, руб.</p>
-                  <input class="form__cost form__cost--start" placeholder="" type="text" />
-                  <input class="form__cost form__cost--end" placeholder="" type="text" />
+                  <input class="form__cost form__cost--start" data-price-start="90000" id="amount_start" placeholder="" type="text" />
+                  <input class="form__cost form__cost--end" data-price-end="420000" id="amount_end" placeholder="" type="text" />
+                  <div class="form__slider-box">
+                    <div class="slider-ui" id="form-slider-ui"></div>
+                  </div>
                 </div>
                 <div class="form__item form__item--btn">
                   <button class="btn btn--orange-fill">Показать проекты</button>
@@ -766,6 +770,7 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="/js/vendor.min.js"></script>
     <script src="/js/script.min.js"></script>
   </body>
