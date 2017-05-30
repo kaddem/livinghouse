@@ -1,40 +1,40 @@
 mixin project-card(tagModif, imgSrc, imgAlt, chartSrc, chartAlt)
-  +b.ARTICLE.project-card
-    +e.inner
-      +e.visual
-        +e.photo
+  +b.A.project-card(href="/projects/project-page.html")&attributes(attributes)
+    +e.DIV.inner
+      +e.DIV.visual
+        +e.DIV.photo
           +e.IMG.img(src= imgSrc, alt= imgAlt)
-        +e.chart
-          +e.chart-item
+        +e.DIV.chart
+          +e.DIV.chart-item
             +e.SPAN.chart-title 1 этаж
             +e.IMG.chart-img(src= chartSrc, alt= chartAlt)
-          +e.chart-item
+          +e.DIV.chart-item
             +e.SPAN.chart-title 1 этаж
             +e.IMG.chart-img(src= chartSrc, alt= chartAlt)
-      +e.info
-        +e.content
-          +e.H2.title Колтуши
-          +e.character
+      +e.DIV.info
+        +e.DIV.content
+          +e.P.title Колтуши
+          +e.DIV.character
             +e.SPAN.key Размер
             +e.SPAN.value 6x9
               +e.SPAN.dimension м
-          +e.character
+          +e.DIV.character
             +e.SPAN.key Площадь
             +e.SPAN.value 88
               +e.SPAN.dimension м
                 +e.SUP 2
-          +e.character
+          +e.DIV.character
             +e.SPAN.key Брус
             +e.SPAN.price.--actual от 
               +e.SPAN.price-actual 319 000
                 +e.SPAN.currency o
               +e.SPAN.price-old 320 000
                 +e.SPAN.currency o
-          +e.character
+          +e.DIV.character
             +e.SPAN.key Каркас
             +e.SPAN.price от 
               +e.SPAN.price-actual 200 000
                 +e.SPAN.currency o
           block
-      +e.tag
-        +e.SPAN.tag-text(class= tagModif)  Скидка 10%
+      +e.DIV.tag
+        +e.SPAN.tag-text(class= tagModif) Скидка 10%
