@@ -203,25 +203,6 @@ $(window).load(function () {
   telMask('.contact-form__input--tel');
   telMask('.consult__input-tel');
 
-  // $('.projects-filter__select').on('click', function(){
-  //   var dropdown = $(this).find('.projects-filter__dropdown');
-  //   var everDropdown = $('.projects-filter__dropdown');
-  //   everDropdown.hide();
-  //   dropdown.toggle();
-  // })
-
-  // $('.form-review__select').on('click', function(){
-  //   var dropdown = $(this).find('.form-review__dropdown');
-  //   dropdown.toggle();
-  // })
-
-  
-  // кастомизация выпадающего списка - select
-  // $('select').selecter();
-  
-
-
-
 
   // Ползунок для форм
   
@@ -335,6 +316,48 @@ $(window).load(function () {
 
   // Закрытие дроптадунов по клику на другой селект
   // 
+  // 
+  // 
+  $(function(){
+
+    var dateEnd = $('#countdown-promo').data('timer-hours');
+  
+    var note = $('#note'),
+      ts = new Date(2012, 0, 1),
+      newYear = true;
+    
+    if((new Date()) > ts){
+      // The new year is here! Count towards something else.
+      // Notice the *1000 at the end - time must be in milliseconds
+      ts = (new Date()).getTime() + dateEnd*24*60*60*1000;
+      newYear = false;
+    }
+
+
+      
+    $('#countdown-promo').countdown({
+      timestamp : ts,
+      callback  : function(days, hours, minutes, seconds){
+        
+        var message = "";
+        
+        message += days + " day" + ( days==1 ? '':'s' ) + ", ";
+        message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
+        message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
+        message += seconds + " second" + ( seconds==1 ? '':'s' ) + " <br />";
+        
+        if(newYear){
+          message += "left until the new year!";
+        }
+        else {
+          message += "left to 10 days from now!";
+        }
+        
+        note.html(message);
+      }
+    });
+    
+  });
 
 
 });

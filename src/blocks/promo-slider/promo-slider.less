@@ -4,6 +4,7 @@
   &__item {
     position: relative;
     padding-top: 100px;
+    padding-bottom: 50px;
     min-height: 400px;
     box-sizing: border-box;
     background-size: cover;
@@ -16,6 +17,7 @@
 
     @media screen and (min-width: @width_desktop_min){
       padding-top: 230px;
+      min-height: 600px;
     }
 
     &:before {
@@ -55,7 +57,7 @@
   &__title {
     display: block;
     margin-top: .83em;
-    margin-bottom: .83em;
+    margin-bottom: 0;
     font-family: @lato;
     font-size: 20px;
     font-weight: bold;
