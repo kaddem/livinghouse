@@ -203,16 +203,15 @@ $(window).load(function () {
   telMask('.contact-form__input--tel');
   telMask('.consult__input-tel');
 
-
   // Ползунок для форм
   
-  function sliderForm(inputStart, inputEnd) {
-    var priceStart = $(inputStart).data('price-start');
+  function sliderForm( inputStart, inputEnd, idSlider, dataStart, dataEnd ) {
+    var priceStart = $(inputStart).data( dataStart );
     console.log(priceStart);
-    var priceEnd = $(inputEnd).data('price-end');
-    console.log(priceStart);
+    var priceEnd = $(inputEnd).data( dataEnd );
+    console.log(priceEnd);
 
-    $( "#form-slider-ui" ).slider({
+    $( idSlider ).slider({
       // orientation: "vertical",
       // step: 15,
       range: true,
@@ -220,34 +219,35 @@ $(window).load(function () {
       max: priceEnd,
       values: [ priceStart, priceEnd ],
       slide: function( event, ui ) {
-        $( "#amount_start" ).val( ui.values[ 0 ] );
-        $( "#amount_end" ).val( ui.values[ 1 ] );
+        $( inputStart ).val( ui.values[ 0 ] );
+        $( inputEnd ).val( ui.values[ 1 ] );
       }
     });
-    $( "#amount_start" ).val( $( "#form-slider-ui" ).slider( "values", 0 ) );
-    $( "#amount_end" ).val( $( "#form-slider-ui" ).slider( "values", 1 ) );
+    $( inputStart ).val( $( idSlider ).slider( "values", 0 ) );
+    $( inputEnd ).val( $( idSlider ).slider( "values", 1 ) );
 
     // Изменение местоположения ползунка при вводиде данных в первый элемент input
-    $("input#amount").change(function(){
-      var value1=$("input#amount_start").val();
-      var value2=$("input#amount_1").val();
-        if(parseInt(value1) > parseInt(value2)){
+    $( inputStart ).change(function(){
+      var value1=$( inputStart ).val();
+      var value2=$( inputEnd ).val();
+
+      if (parseInt(value1) > parseInt(value2)){
         value1 = value2;
-        $("input#amount_start").val(value1);
+        $( inputStart ).val(value1);
       }
-      $("#form-slider-ui").slider("values",0,value1); 
+      $(idSlider).slider("values",0,value1); 
     });
         
     // Изменение местоположения ползунка при вводиде данных в второй элемент input  
-    $("input#amount_1").change(function(){
-      var value1=$("input#amount_start").val();
-      var value2=$("input#amount_end").val();
+    $( inputEnd ).change(function(){
+      var value1=$( inputStart ).val();
+      var value2=$( inputEnd ).val();
 
       if(parseInt(value1) > parseInt(value2)){
         value2 = value1;
-        $("input#amount_end").val(value2);
+        $( inputEnd ).val(value2);
       }
-      $("#form-slider-ui").slider("values",1,value2);
+      $(idSlider).slider("values",1,value2);
     });
 
     // фильтрация ввода в поля
@@ -267,9 +267,8 @@ $(window).load(function () {
 
   }
 
-  sliderForm('.form__cost--start', '.form__cost--end');
-  sliderForm('.projects-filter__cost--start', '.projects-filter__cost--end')
-
+  sliderForm('.projects-filter__cost--start', '.projects-filter__cost--end', '#project-slider-ui', 'proj-start', 'proj-end');
+  sliderForm('.form__cost--start', '.form__cost--end', '#form-slider-ui', 'price-start', 'price-end');
 
   // Закрытие дропдаунов по клику вне их
   // 

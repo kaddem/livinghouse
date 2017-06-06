@@ -1,61 +1,116 @@
 .countdown{
 	display: block;
   width:auto;
-  height: 60px;
+  height: 30px;
   margin:0 auto;
-  font-size: 40px;
+  font-size: 20px;
   font-family: @lato;
   font-weight: bold;
   text-align: left;
   margin-bottom: 30px;
 
+  @media screen and (min-width: @width_tablet){
+    height: 60px;
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: @width_desktop_min){
+    
+  }
+
   .position{
     display: inline-block;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     overflow: hidden;
     position: relative;
-    width: 60px;
+    
+
+    @media screen and (min-width: @width_tablet){
+      height: 60px;
+      width: 60px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   .digit{
     position:absolute;
     display:block;
-    width: 60px;
+    width: 30px;
     padding-top: 2px;
     box-sizing: border-box;
-    height: 60px;
-    line-height: 60px;
+    height: 30px;
+    line-height: 30px;
     background-color: rgba(76, 90, 122, .75);
     border-radius: 8px;
     text-align:center;
     color:#fff;
     letter-spacing:-1px;
+
+    @media screen and (min-width: @width_tablet){
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   .countDays, .countHours, .countMinutes, .countSeconds{
-    height: 60px;
+    height: 30px;
     display: inline-block;
+
+    @media screen and (min-width: @width_tablet){
+      height: 60px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   .countDiv{
     display: inline-block;
-    width: 16px;
-    height: 60px;
+    width: 8px;
+    height: 30px;
     position: relative;
+
+    @media screen and (min-width: @width_tablet){
+      width: 16px;
+      height: 60px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   .countDiv:before,
   .countDiv:after{
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height:  4px;
     background-color: rgba(76, 90, 122, .75);
     border-radius: 50%;
     left: 50%;
-    margin-left: -3px;
+    margin-left: -2px;
     top: 0.5em;
     box-shadow: 1px 1px 1px rgba(4, 4, 4, 0.5);
     content: '';
+
+    @media screen and (min-width: @width_tablet){
+      width: 5px;
+      height: 5px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+      
+    }
   }
 
   .countDiv:after{
@@ -63,40 +118,106 @@
   }
 
   &--project {
-    height: 40px;
+    height: 30px;
     margin-top: 20px;
     margin-bottom: 0;
     font-size: 24px;
 
-    .digit{
-      width: 40px;
+    @media screen and (min-width: @width_tablet){
+      height: 30px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
       height: 40px;
-      line-height: 40px;
-      font-size: 24px;
+    }
+
+    .digit{
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 20px;
+
+      @media screen and (min-width: @width_tablet){
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 24px;
+      }
     }
 
     .countDays, .countHours, .countMinutes, .countSeconds{
-      height: 40px;
+      height: 30px;
       display: inline-block;
       font-size: 0;
+
+      @media screen and (min-width: @width_tablet){
+        height: 30px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        height: 40px;
+      }
     }
 
     .position {
-      height: 40px;
-      width: 40px;
+      height: 30px;
+      width: 30px;
       margin-left: 2px;
       font-size: 0;
+
+      @media screen and (min-width: @width_tablet){
+        height: 30px;
+        width: 30px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        height: 40px;
+        width: 40px;
+      }
 
       &:first-child{
         margin-left: 0;
       }
+
     }
 
     .countDiv{
       display: inline-block;
       width: 10px;
-      height: 40px;
+      height: 30px;
       position: relative;
+
+      @media screen and (min-width: @width_tablet){
+        height: 30px;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        height: 40px;
+      }
+    }
+
+    .countDiv:before,
+    .countDiv:after{
+      top: 0.2em;
+
+      @media screen and (min-width: @width_tablet){
+
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        
+      }
+    }
+
+    .countDiv:after{
+      top:0.5em;
     }
   }
 }
