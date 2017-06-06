@@ -1,0 +1,89 @@
+.social{
+	display: block;
+  padding-left: 0;
+  margin-top: 30px;
+
+  &__item {
+    position: relative;
+    display: block;
+
+    &:first-child {
+
+      & .social__link {
+        border-top: 1px solid #e6e6e6;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 22px;
+      margin: auto;
+      display: block;
+      background-size: @icon-heart-2x-total-width/2 @icon-heart-2x-total-height/2;
+    }
+
+    &--favorites {
+      
+      &:before {
+        .sprite(@icon-heart-2x);
+        width: @icon-heart-2x-width/2;
+        height: @icon-heart-2x-height/2;
+        background-position:@icon-heart-2x-offset-x/2 @icon-heart-2x-offset-y/2;
+      }
+    }
+
+    &--print {
+
+      &:before {
+        .sprite(@icon-prin-2x);
+        width: @icon-prin-2x-width/2;
+        height: @icon-prin-2x-height/2;
+        background-position: @icon-prin-2x-offset-x/2 @icon-prin-2x-offset-y/2;
+      }
+    }
+
+    &--reviews {
+      &:before {
+        .sprite(@icon-dialog-blue-2x);
+        width: @icon-dialog-blue-2x-width/2;
+        height: @icon-dialog-blue-2x-height/2;
+        background-position: @icon-dialog-blue-2x-offset-x/2 @icon-dialog-blue-2x-offset-y/2;
+      }
+    }
+
+    &--share {
+      &:before {
+        .sprite(@icon-replace-2x);
+        width: @icon-replace-2x-width/2;
+        height: @icon-replace-2x-height/2;
+        background-position: @icon-replace-2x-offset-x/2 @icon-replace-2x-offset-y/2;
+      }
+    }
+
+    &--compare {
+      &:before {
+        .sprite(@icon-rings-2x);
+        width: @icon-rings-2x-width/2+1;
+        height: @icon-rings-2x-height/2+1;
+        background-position:@icon-rings-2x-offset-x/2 @icon-rings-2x-offset-y/2;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding-left: 60px;
+    box-sizing: border-box;
+    font-family: @lato;
+    font-size: 15px;
+    line-height: 48px;
+    color: @blue;
+    font-weight: normal;
+    text-decoration: none;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+  }
+}

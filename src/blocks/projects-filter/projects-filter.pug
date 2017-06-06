@@ -69,9 +69,12 @@ mixin projects-filter()
         +e.item.--price
           +e.price
             +e.LABEL.label Стоимость от
-            +e.INPUT.cost.--start(placeholder="", value="100 000")
+            +e.INPUT.cost.--start(data-price-start="90000" id="amount_start" placeholder="")
           +e.price
             +e.LABEL.label До
-            +e.INPUT.cost.--end(placeholder="", value="300 000")
+            +e.INPUT.cost.--end(data-price-end="420000" id="amount_end" placeholder="")
+          +b.DIV.slider-box
+            +b.slider-ui(id="form-slider-ui")
+            
         +e.item.--btn
           +e.BUTTON.btn 

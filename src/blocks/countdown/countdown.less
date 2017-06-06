@@ -4,12 +4,10 @@
   height: 60px;
   margin:0 auto;
   font-size: 40px;
-  // line-height: 1.5;
   font-family: @lato;
   font-weight: bold;
   text-align: left;
   margin-bottom: 30px;
-  // letter-spacing:-3px;
 
   .position{
     display: inline-block;
@@ -34,45 +32,9 @@
     letter-spacing:-1px;
   }
 
-  .digit.static{
-    // box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
-    
-    // background-image: linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
-    // background-image: -o-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
-    // background-image: -moz-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
-    // background-image: -webkit-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
-    // background-image: -ms-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
-    
-    // background-image: -webkit-gradient(
-    //  linear,
-    //  left bottom,
-    //  left top,
-    //  color-stop(0.5, #3A3A3A),
-    //  color-stop(0.5, #444444)
-    // );
-  }
-
-  /**
-   * You can use these classes to hide parts
-   * of the countdown that you don't need.
-   */
-
-  .countDays{ /* display:none !important;*/ }
-  .countDiv0{ /* display:none !important;*/ }
-  .countHours{}
-  .countDiv1{}
-  .countMinutes{}
-  .countDiv2{}
-  .countSeconds{}
-
-
   .countDays, .countHours, .countMinutes, .countSeconds{
     height: 60px;
     display: inline-block;
-  }
-
-  .position {
-    height: 60px;
   }
 
   .countDiv{
@@ -96,9 +58,45 @@
     content: '';
   }
 
-
-
   .countDiv:after{
     top:0.9em;
+  }
+
+  &--project {
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 24px;
+
+    .digit{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 24px;
+    }
+
+    .countDays, .countHours, .countMinutes, .countSeconds{
+      height: 40px;
+      display: inline-block;
+      font-size: 0;
+    }
+
+    .position {
+      height: 40px;
+      width: 40px;
+      margin-left: 2px;
+      font-size: 0;
+
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+
+    .countDiv{
+      display: inline-block;
+      width: 10px;
+      height: 40px;
+      position: relative;
+    }
   }
 }

@@ -25,6 +25,9 @@ mixin project(title, imgSrc, imgAlt, chartSrc, chartAlt)
                 +e.SPAN.price-actual 250 000
                   +e.SPAN.currency o
               block
+            +e.countdown До конца акции осталось:
+            +countdown(8).--project
+
             +e.character
               +e.character-item
                 +e.SPAN.key Размер:
@@ -50,3 +53,5 @@ mixin project(title, imgSrc, imgAlt, chartSrc, chartAlt)
               +e.character-item.--balcony
                 +e.SPAN.key Балкон:
                 +e.SPAN.value 2
+
+          +social()

@@ -206,10 +206,10 @@ $(window).load(function () {
 
   // Ползунок для форм
   
-  $(function() {
-    var priceStart = $('.form__cost--start').data('price-start');
+  function sliderForm(inputStart, inputEnd) {
+    var priceStart = $(inputStart).data('price-start');
     console.log(priceStart);
-    var priceEnd = $('.form__cost--end').data('price-end');
+    var priceEnd = $(inputEnd).data('price-end');
     console.log(priceStart);
 
     $( "#form-slider-ui" ).slider({
@@ -265,7 +265,10 @@ $(window).load(function () {
     
     });
 
-  });
+  }
+
+  sliderForm('.form__cost--start', '.form__cost--end');
+  sliderForm('.projects-filter__cost--start', '.projects-filter__cost--end')
 
 
   // Закрытие дропдаунов по клику вне их
