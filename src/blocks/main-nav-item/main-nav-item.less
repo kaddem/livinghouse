@@ -9,6 +9,7 @@
     border-top: solid 1px lightgrey;
 
     @media screen and (min-width: @width_tablet){
+      position: static;
       padding: 15px;
       display: inline-block;
       margin-left: 60px;
@@ -17,7 +18,7 @@
     }
 
     @media screen and (min-width: @width_desktop_min){
-
+      position: relative;
     }
 
     &:first-child {
@@ -69,4 +70,24 @@
       }
     }
   }
+}
+
+.page-header--index {
+
+    & .main-nav__link {
+
+      &:hover + .subnav{
+
+        @media screen and (min-width: @width_tablet){
+          display: none;
+        }
+
+        @media screen and (min-width: @width_desktop_min){
+          background-color: transparent;
+          display: block;
+          opacity: 1;
+        }
+      }
+    }
+
 }

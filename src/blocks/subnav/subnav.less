@@ -2,18 +2,26 @@
 
   @media screen and (min-width: @width_tablet){
     position: absolute;
-    display: none;
-    padding-top: 20px;
+    width: 100%;
+    padding-top: 0;
     margin-top: 0;
     top: 100%;
+    left: 0;
     text-align: left;
     transition: all .4s ease;
     z-index: 100;
+    border-top: solid 1px #f1f0ee;
+    border-bottom: solid 1px #f1f0ee;
+    background-color: #fff;
   }
 
   @media screen and (min-width: @width_desktop_min){
     display: none;
+    width: auto;
+    padding-top: 20px;
     opacity: 0;
+    border-top: none;
+    border-bottom: none;
   }
 
   &:hover {
@@ -25,44 +33,44 @@
     padding-left: 10px;
 
     @media screen and (min-width: @width_tablet){
-      position: relative;
-      background-color: #fff;
-      border-radius: 5px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-left: 5px;
-      padding-right: 5px;
-      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
-      z-index: 0;
-      white-space: nowrap;
+      .container(30px);
+      text-align: center;
+      // position: relative;
+      // background-color: #fff;
+      // border-radius: 5px;
+      // padding-top: 5px;
+      // padding-bottom: 5px;
+      // padding-left: 5px;
+      // padding-right: 5px;
+      // box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+      // z-index: 0;
+      // white-space: nowrap;
     }
 
     @media screen and (min-width: @width_desktop_min){
+      position: relative;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+      z-index: 0;
+      text-align: left;
+      white-space: nowrap;
     }
 
     &:before {
-      // content: '';
-      // position: absolute;
-      // top: -10px;
-      // left: 25%;
-      // display: block;
-      // width: 20px;
-      // height: 20px;
-      // background-color: #fff;
-      // transform: rotate(-45deg);
-      // z-index: 1;
-      // box-shadow: 2px -2px 4px 0 rgba(0, 0, 0, 0.1);
 
       @media screen and (min-width: @width_tablet){
         content: '';
         position: absolute;
-        top: -10px;
-        left: 30px;
+        top: -7px;
+        left: 110px;
         display: block;
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         background-color: #fff;
         transform: rotate(-45deg);
         z-index: 1;
@@ -71,6 +79,10 @@
 
       @media screen and (min-width: @width_desktop_min){
         left: 25%;
+        top: -10px;
+        display: block;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -115,6 +127,29 @@
     &:hover {
       background-color: @blue;
       color: #fff;
+    }
+  }
+}
+
+.page-header {
+
+  &--index {
+
+    & .subnav {
+
+      @media screen and (min-width: @width_tablet){
+        display: none;
+      }
+
+      @media screen and (min-width: @width_desktop_min){
+        
+      }
+
+      &:hover {
+        display: block;
+        background-color: transparent;
+        opacity: 1;
+      }
     }
   }
 }

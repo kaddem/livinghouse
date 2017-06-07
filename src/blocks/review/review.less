@@ -8,6 +8,7 @@
   &__number {
     display: inline-block;
     margin-right: 10px;
+    margin-top: 30px;
     font-family: @lato;
     font-size: 24px;
     line-height: 29px;
@@ -27,14 +28,23 @@
     letter-spacing: 1.5px;
     color: @blue;
     text-transform: uppercase;
+    text-align: left;
 
     @media screen and (min-width: @width_tablet){
-      margin-top: 30px;
-      text-align: center;
+      // margin-top: 30px;
+      
     }
 
     @media screen and (min-width: @width_desktop_min){
+      text-align: center;
+    }
 
+    & > h1 {
+      text-align: left;
+
+      @media screen and (min-width: @width_tablet){
+        text-align: left;
+      }
     }
   }
 
