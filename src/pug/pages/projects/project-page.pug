@@ -604,23 +604,30 @@ block content
             +e.table
               +e.table-select
                 +e.table-row
-                  +e.table-col.--description
+                  +e.table-col.--des
                     +e.P.description Винтовые сваи, шт.
-                  +e.table-col.--quantity 10
-                  +e.table-col.--price 50 000
+                  +e.table-col.--quant 
+                    +e.SPAN.plus-minus.--plus
+                    +e.INPUT.input-quant(value="10")
+                    +e.SPAN.plus-minus.--minus
+                  +e.table-col.--money 50 000
                   +e.table-col.--action
+                    +e.INPUT.action-check(type="checkbox" id="check-1")
+                    +e.LABEL.action-label(for="check-1") Добавить
                 +e.table-row
-                  +e.table-col.--description
-                    +e.P.description Лента
-                  +e.table-col.--quantity 4
-                  +e.table-col.--price 150 000
+                  +e.table-col.--des
+                    +e.P.description Лента 
+                  +e.table-col.--money.--offset 150 000
                   +e.table-col.--action
+                    +e.INPUT.action-check(type="checkbox" id="check-2")
+                    +e.LABEL.action-label(for="check-2") Добавить
                 +e.table-row
-                  +e.table-col.--description
-                    +e.P.description Плита
-                  +e.table-col.--quantity 35
-                  +e.table-col.--price 20 000
+                  +e.table-col.--des
+                    +e.P.description Плита 
+                  +e.table-col.--money.--offset 20 000
                   +e.table-col.--action
+                    +e.INPUT.action-check(type="checkbox" id="check-3")
+                    +e.LABEL.action-label(for="check-3") Добавить
 
           +e.section.--btn
             +b.BUTTON.btn.--orange.--orange-fill.--pr-form Сохранить
