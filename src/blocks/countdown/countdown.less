@@ -81,7 +81,7 @@
     position: relative;
 
     @media screen and (min-width: @width_tablet){
-      width: 16px;
+      width: 14px;
       height: 60px;
     }
 
@@ -109,12 +109,16 @@
     }
 
     @media screen and (min-width: @width_desktop_min){
-      
+      margin-left: -3px;
     }
   }
 
   .countDiv:after{
     top:0.9em;
+
+    @media screen and (min-width: @width_desktop_min){
+      top: 0.7em;
+    }
   }
 
   &--project {
