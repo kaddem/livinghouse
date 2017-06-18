@@ -795,6 +795,15 @@
     background-position: @icon-info-2x-offset-x/2 @icon-info-2x-offset-y/2;
     background-size: @icon-info-2x-total-width/2, @icon-info-2x-total-height/2;
     cursor: pointer;
+
+    &--open {
+      .sprite(@icon-close-2x);
+      width: @icon-close-2x-width/2;
+      height: @icon-close-2x-height/2;
+      background-position: @icon-close-2x-offset-x/2 @icon-close-2x-offset-y/2;
+      background-size: @icon-info-2x-total-width/2, @icon-info-2x-total-height/2;
+
+    }
   }
 
 }
@@ -937,8 +946,10 @@
 
 
 .project-modal {
+  display: none;
   position: absolute;
-  top: 50%;
+  top: 0;
+  left: 0;
   width: 300px;
   padding: 20px;
   box-sizing: border-box;
@@ -946,6 +957,7 @@
   border-radius: 5px;
   box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.3);
   .clearfix();
+  z-index: 150;
 
   @media screen and (min-width: @width_tablet){
     width: 500px;
@@ -955,11 +967,23 @@
 
   }
 
+  &--open {
+    display: block;
+  }
+
   &__visual {
-    width: 248px;
+    width: 100%;
     height: 248px;
     float: left;
     overflow: hidden;
+
+    @media screen and (min-width: @width_tablet){
+      width: 248px;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__img {
@@ -969,8 +993,17 @@
   }
 
   &__info {
-    width: 190px;
-    float: right;
+    width: 100%;
+    float: left;
+
+    @media screen and (min-width: @width_tablet){
+      width: 190px;
+      float: right;
+    }
+
+    @media screen and (min-width: @width_desktop_min){
+
+    }
   }
 
   &__title {
