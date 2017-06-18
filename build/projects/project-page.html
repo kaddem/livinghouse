@@ -238,7 +238,9 @@
                   <div class="project-form__table-select">
                     <div class="project-form__table-row">
                       <div class="project-form__table-col project-form__table-col--description">
-                        <p class="project-form__description">Карка с сечением 150х200мм. Комплект детале</p>
+                        <p class="project-form__description">Карка с сечением 150х200мм. Комплект детале
+                          <span class="project-form__info"></span>
+                        </p>
                       </div>
                       <div class="project-form__table-col project-form__table-col--value">
                         <div class="project-form__value-field">
@@ -881,7 +883,7 @@
               <div class="project-form__head">
                 <h3 class="project-form__title project-form__title--accordeon">Добавить фундамент</h3>
               </div>
-              <div class="project-form__table">
+              <div class="project-form__table project-form__table--hide" id="dropdown-table">
                 <div class="project-form__table-select">
                   <div class="project-form__table-row">
                     <div class="project-form__table-col project-form__table-col--des">
@@ -889,10 +891,10 @@
                     </div>
                     <div class="project-form__table-col project-form__table-col--quant">
                       <span class="project-form__plus-minus project-form__plus-minus--plus"></span>
-                      <input class="project-form__input-quant" value="10" type="text" />
+                      <input class="project-form__input-quant" id="pile-price" data-one-price="5000" value="10" type="text" />
                       <span class="project-form__plus-minus project-form__plus-minus--minus"></span>
                     </div>
-                    <div class="project-form__table-col project-form__table-col--money">50 000</div>
+                    <div class="project-form__table-col project-form__table-col--money" id="price-summ">50 000</div>
                     <div class="project-form__table-col project-form__table-col--action">
                       <input class="project-form__action-check" type="checkbox" id="check-1" />
                       <label class="project-form__action-label" for="check-1">Добавить</label>
@@ -1037,6 +1039,23 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <div class="project-modal">
+      <div class="project-modal__visual">
+        <img class="project-modal__img" src="/img/bora-bora.jpg" alt="" role="presentation" />
+      </div>
+      <div class="project-modal__info">
+        <storng class="project-modal__title">Обвязочный ряд из пиленого бруса</storng>
+        <p class="project-modal__description">Сечение 150х200мм</p>
+        <ul class="project-modal__detail-list">
+          <li class="project-modal__detail-item">Комплект деталей.</li>
+          <li class="project-modal__detail-item">Комплект деталей.</li>
+          <li class="project-modal__detail-item">Комплект деталей.</li>
+          <li class="project-modal__detail-item">Комплект деталей.</li>
+          <li class="project-modal__detail-item">Комплект деталей.</li>
+          <li class="project-modal__detail-item">Комплект деталей.</li>
+        </ul>
+      </div>
+    </div>
     <script src="/js/vendor.min.js"></script>
     <script src="/js/script.min.js"></script>
   </body>

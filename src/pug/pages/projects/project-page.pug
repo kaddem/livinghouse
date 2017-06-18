@@ -57,6 +57,7 @@ block content
                   +e.table-row
                     +e.table-col.--description
                       +e.P.description Карка с сечением 150х200мм. Комплект детале
+                        +e.SPAN.info
                     +e.table-col.--value
                       +e.value-field
                         +e.value-list
@@ -601,16 +602,16 @@ block content
           +e.section.--center
             +e.head
               +e.H3.title.--accordeon Добавить фундамент
-            +e.table
+            +e.table.--hide(id="dropdown-table")
               +e.table-select
                 +e.table-row
                   +e.table-col.--des
                     +e.P.description Винтовые сваи, шт.
                   +e.table-col.--quant 
                     +e.SPAN.plus-minus.--plus
-                    +e.INPUT.input-quant(value="10")
+                    +e.INPUT.input-quant(id="pile-price" data-one-price="5000" value="10")
                     +e.SPAN.plus-minus.--minus
-                  +e.table-col.--money 50 000
+                  +e.table-col.--money(id="price-summ") 50 000
                   +e.table-col.--action
                     +e.INPUT.action-check(type="checkbox" id="check-1")
                     +e.LABEL.action-label(for="check-1") Добавить
@@ -647,3 +648,17 @@ block content
         +usefull-nav
       +contacts("mailto:info@Lhspb.ru")
     +juristic
+
+  +b.DIV.project-modal
+    +e.visual
+      +e.IMG.img(src="/img/bora-bora.jpg" alt="")
+    +e.info
+      +e.STORNG.title Обвязочный ряд из пиленого бруса
+      +e.P.description Сечение 150х200мм
+      +e.UL.detail-list
+        +e.LI.detail-item Комплект деталей.
+        +e.LI.detail-item Комплект деталей.
+        +e.LI.detail-item Комплект деталей.
+        +e.LI.detail-item Комплект деталей.
+        +e.LI.detail-item Комплект деталей.
+        +e.LI.detail-item Комплект деталей.

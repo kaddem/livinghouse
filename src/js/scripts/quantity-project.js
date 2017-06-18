@@ -1,9 +1,16 @@
 $(document).ready(function(){
 
+  function abc2(n) {
+    n += "";
+    n = new Array(4 - n.length % 3).join("U") + n;
+    return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+  }
+
   $('.project-form__plus-minus').on('click', function(){
     var thisElem = $(this);
     var input = $('.project-form__input-quant');
     var value = Number( input.val() );
+    var price = $('#pile-price').data( 'one-price' );
 
     if ( value == 0 && $(thisElem).hasClass( 'project-form__plus-minus--plus' ) ) {
       value = value + 1;
@@ -17,6 +24,10 @@ $(document).ready(function(){
       value = value - 1;
       $(input).val(value);
     }
+
+    var priceSumm = abc2(price * value);
+
+    $('#price-summ').text(priceSumm);
 
   })
 
